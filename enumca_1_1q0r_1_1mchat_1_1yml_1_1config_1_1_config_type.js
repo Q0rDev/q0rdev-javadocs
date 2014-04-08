@@ -1,0 +1,28 @@
+var enumca_1_1q0r_1_1mchat_1_1yml_1_1config_1_1_config_type =
+[
+    [ "getBoolean", "enumca_1_1q0r_1_1mchat_1_1yml_1_1config_1_1_config_type.html#a2bd8906bb6e3cc1fad9b27f1bb998b84", null ],
+    [ "getDouble", "enumca_1_1q0r_1_1mchat_1_1yml_1_1config_1_1_config_type.html#ad0d78b1cca120547ec6a803d6b53c5d4", null ],
+    [ "getInteger", "enumca_1_1q0r_1_1mchat_1_1yml_1_1config_1_1_config_type.html#ac7307191ecc415d21b726c92944d5d87", null ],
+    [ "getList", "enumca_1_1q0r_1_1mchat_1_1yml_1_1config_1_1_config_type.html#aa9e3857661f541a79d16b4aaeaeecf9f", null ],
+    [ "getString", "enumca_1_1q0r_1_1mchat_1_1yml_1_1config_1_1_config_type.html#a211998e5a68e0471a38c4f7a5985c4b6", null ],
+    [ "INFO_ADD_NEW_PLAYERS", "enumca_1_1q0r_1_1mchat_1_1yml_1_1config_1_1_config_type.html#a58e1c9f6a80cce1928214010878f8ed9", null ],
+    [ "INFO_DEFAULT_GROUP", "enumca_1_1q0r_1_1mchat_1_1yml_1_1config_1_1_config_type.html#acf9f5d8a8058be7577d1184cd09141ac", null ],
+    [ "INFO_USE_LEVELED_NODES", "enumca_1_1q0r_1_1mchat_1_1yml_1_1config_1_1_config_type.html#a99d17304d8dc4898f3b7830b41f14a09", null ],
+    [ "INFO_USE_NEW_INFO", "enumca_1_1q0r_1_1mchat_1_1yml_1_1config_1_1_config_type.html#a8b8420f4c77923399baa1e3014cec922", null ],
+    [ "INFO_USE_OLD_NODES", "enumca_1_1q0r_1_1mchat_1_1yml_1_1config_1_1_config_type.html#abb59344379740552c5d9bb88068906ac", null ],
+    [ "MCHAT_ALTER_EVENTS", "enumca_1_1q0r_1_1mchat_1_1yml_1_1config_1_1_config_type.html#ac0239a47120aee8c1bd5d22b4ed4f62d", null ],
+    [ "MCHAT_API_ONLY", "enumca_1_1q0r_1_1mchat_1_1yml_1_1config_1_1_config_type.html#a2913f94c4281463d0e78cef59474bb4e", null ],
+    [ "MCHAT_CAPS_LOCK_RANGE", "enumca_1_1q0r_1_1mchat_1_1yml_1_1config_1_1_config_type.html#a883267580e218135fb8e76d82316477f", null ],
+    [ "MCHAT_CHAT_DISTANCE", "enumca_1_1q0r_1_1mchat_1_1yml_1_1config_1_1_config_type.html#a84dfb85310de95d6aa1776f2171f7be0", null ],
+    [ "MCHAT_CUS_VAR_INDICATOR", "enumca_1_1q0r_1_1mchat_1_1yml_1_1config_1_1_config_type.html#ac8622c8199741010a9a839031786eddb", null ],
+    [ "MCHAT_IP_CENSOR", "enumca_1_1q0r_1_1mchat_1_1yml_1_1config_1_1_config_type.html#a095344249df69e206e1e30c98a85a230", null ],
+    [ "MCHAT_LOCALE_VAR_INDICATOR", "enumca_1_1q0r_1_1mchat_1_1yml_1_1config_1_1_config_type.html#aa4b178d0d5de1036d4c0434867cfe355", null ],
+    [ "MCHAT_UPDATE_CHECK", "enumca_1_1q0r_1_1mchat_1_1yml_1_1config_1_1_config_type.html#a81be737545e697b62362e2828d26e4d8", null ],
+    [ "MCHAT_VAR_INDICATOR", "enumca_1_1q0r_1_1mchat_1_1yml_1_1config_1_1_config_type.html#abfb727379571e08c725a46c620108a90", null ],
+    [ "SUPPRESS_MAX_JOIN", "enumca_1_1q0r_1_1mchat_1_1yml_1_1config_1_1_config_type.html#a150b336407f0c107a5ac5a782f11fff6", null ],
+    [ "SUPPRESS_MAX_KICK", "enumca_1_1q0r_1_1mchat_1_1yml_1_1config_1_1_config_type.html#a560f51efdb40b594b753336e63e8278c", null ],
+    [ "SUPPRESS_MAX_QUIT", "enumca_1_1q0r_1_1mchat_1_1yml_1_1config_1_1_config_type.html#a1f379971bf04426450f0ac5c4e6f0e6e", null ],
+    [ "SUPPRESS_USE_JOIN", "enumca_1_1q0r_1_1mchat_1_1yml_1_1config_1_1_config_type.html#a426d24f010c0019d845081a6b18737f8", null ],
+    [ "SUPPRESS_USE_KICK", "enumca_1_1q0r_1_1mchat_1_1yml_1_1config_1_1_config_type.html#a0210d445389abb1bdda2203c7b6708e0", null ],
+    [ "SUPPRESS_USE_QUIT", "enumca_1_1q0r_1_1mchat_1_1yml_1_1config_1_1_config_type.html#af2d26c2a86f58d453713fdbcd3ff3276", null ]
+];
