@@ -22,7 +22,7 @@ var searchData=
   ['getprefix',['getPrefix',['../classca_1_1q0r_1_1mchat_1_1api_1_1_reader.html#a732cdf7331c52ff0a5cf0bc353a6e8ca',1,'ca::q0r::mchat::api::Reader']]],
   ['getraw',['getRaw',['../enumca_1_1q0r_1_1mchat_1_1yml_1_1locale_1_1_locale_type.html#a527984d2e0c674e284f82e0eea922798',1,'ca::q0r::mchat::yml::locale::LocaleType']]],
   ['getrawgroup',['getRawGroup',['../classca_1_1q0r_1_1mchat_1_1api_1_1_reader.html#aaf9d66ce7d5c8968d72da11842090b6e',1,'ca::q0r::mchat::api::Reader']]],
-  ['getrawgroups',['getRawGroups',['../classca_1_1q0r_1_1mchat_1_1api_1_1_reader.html#a3213e097248018ceabde2e43ea056ca1',1,'ca::q0r::mchat::api::Reader']]],
+  ['getrawgroups',['getRawGroups',['../classca_1_1q0r_1_1mchat_1_1api_1_1_reader.html#a24972bfe21c509fb9fdb01bb5b49fe63',1,'ca::q0r::mchat::api::Reader']]],
   ['getrawinfo',['getRawInfo',['../classca_1_1q0r_1_1mchat_1_1api_1_1_reader.html#ad12b70a76f355ba88b127031d9e4525e',1,'ca::q0r::mchat::api::Reader']]],
   ['getrawprefix',['getRawPrefix',['../classca_1_1q0r_1_1mchat_1_1api_1_1_reader.html#a14b9343783b60a4a0a3d32a033896dcc',1,'ca::q0r::mchat::api::Reader']]],
   ['getrawsuffix',['getRawSuffix',['../classca_1_1q0r_1_1mchat_1_1api_1_1_reader.html#abb214073c0669f2943713392bad6cb67',1,'ca::q0r::mchat::api::Reader']]],

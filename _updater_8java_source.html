@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.6"/>
-<title>MChat: C:/Users/M4n/Dropbox/Coding/m-workspace/MChat/src/main/java/ca/q0r/mchat/updater/Updater.java Source File</title>
+<title>MChat: src/main/java/ca/q0r/mchat/updater/Updater.java Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -373,109 +373,106 @@ $(document).ready(function(){initNavTree('_updater_8java_source.html','');});
 <div class="line"><a name="l00365"></a><span class="lineno">  365</span>&#160;            Integer length = plugin.getDescription().getVersion().split(<span class="stringliteral">&quot;-&quot;</span>).length;</div>
 <div class="line"><a name="l00366"></a><span class="lineno">  366</span>&#160;            String version = plugin.getDescription().getVersion().split(<span class="stringliteral">&quot;-&quot;</span>)[length - 1].split(<span class="stringliteral">&quot;git&quot;</span>)[0];</div>
 <div class="line"><a name="l00367"></a><span class="lineno">  367</span>&#160;</div>
-<div class="line"><a name="l00368"></a><span class="lineno">  368</span>&#160;            System.out.println(<span class="stringliteral">&quot;V: &quot;</span> + version);</div>
-<div class="line"><a name="l00369"></a><span class="lineno">  369</span>&#160;            System.out.println(<span class="stringliteral">&quot;T: &quot;</span> + title.split(<span class="stringliteral">&quot; &quot;</span>)[1]);</div>
+<div class="line"><a name="l00368"></a><span class="lineno">  368</span>&#160;            <span class="keywordflow">if</span> (title.split(<span class="stringliteral">&quot; &quot;</span>).length == 2) {</div>
+<div class="line"><a name="l00369"></a><span class="lineno">  369</span>&#160;                <span class="keyword">final</span> String remoteVersion = title.split(<span class="stringliteral">&quot; &quot;</span>)[1]; <span class="comment">// Get the newest file&#39;s version number</span></div>
 <div class="line"><a name="l00370"></a><span class="lineno">  370</span>&#160;</div>
-<div class="line"><a name="l00371"></a><span class="lineno">  371</span>&#160;            <span class="keywordflow">if</span> (title.split(<span class="stringliteral">&quot; &quot;</span>).length == 2) {</div>
-<div class="line"><a name="l00372"></a><span class="lineno">  372</span>&#160;                <span class="keyword">final</span> String remoteVersion = title.split(<span class="stringliteral">&quot; &quot;</span>)[1]; <span class="comment">// Get the newest file&#39;s version number</span></div>
-<div class="line"><a name="l00373"></a><span class="lineno">  373</span>&#160;</div>
-<div class="line"><a name="l00374"></a><span class="lineno">  374</span>&#160;                <span class="keywordflow">if</span> (this.hasTag(version) || version.equalsIgnoreCase(remoteVersion)) {</div>
-<div class="line"><a name="l00375"></a><span class="lineno">  375</span>&#160;                    <span class="comment">// We already have the latest version, or this build is tagged for no-update</span></div>
-<div class="line"><a name="l00376"></a><span class="lineno">  376</span>&#160;                    this.result = Updater.UpdateResult.NO_UPDATE;</div>
-<div class="line"><a name="l00377"></a><span class="lineno">  377</span>&#160;                    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00378"></a><span class="lineno">  378</span>&#160;                }</div>
-<div class="line"><a name="l00379"></a><span class="lineno">  379</span>&#160;            } <span class="keywordflow">else</span> {</div>
-<div class="line"><a name="l00380"></a><span class="lineno">  380</span>&#160;                <span class="comment">// The file&#39;s name did not contain the string &#39;vVersion&#39;</span></div>
-<div class="line"><a name="l00381"></a><span class="lineno">  381</span>&#160;                <span class="keyword">final</span> String authorInfo = this.plugin.getDescription().getAuthors().size() == 0 ? <span class="stringliteral">&quot;&quot;</span> : <span class="stringliteral">&quot; (&quot;</span> + this.plugin.getDescription().getAuthors().<span class="keyword">get</span>(0) + <span class="stringliteral">&quot;)&quot;</span>;</div>
-<div class="line"><a name="l00382"></a><span class="lineno">  382</span>&#160;                this.plugin.getLogger().warning(<span class="stringliteral">&quot;The author of this plugin&quot;</span> + authorInfo + <span class="stringliteral">&quot; has misconfigured their Auto Update system&quot;</span>);</div>
-<div class="line"><a name="l00383"></a><span class="lineno">  383</span>&#160;                this.plugin.getLogger().warning(<span class="stringliteral">&quot;File versions should follow the format &#39;PluginName vVERSION&#39;&quot;</span>);</div>
-<div class="line"><a name="l00384"></a><span class="lineno">  384</span>&#160;                this.plugin.getLogger().warning(<span class="stringliteral">&quot;Please notify the author of this error.&quot;</span>);</div>
-<div class="line"><a name="l00385"></a><span class="lineno">  385</span>&#160;                this.result = Updater.UpdateResult.FAIL_NOVERSION;</div>
-<div class="line"><a name="l00386"></a><span class="lineno">  386</span>&#160;                <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00387"></a><span class="lineno">  387</span>&#160;            }</div>
-<div class="line"><a name="l00388"></a><span class="lineno">  388</span>&#160;        }</div>
+<div class="line"><a name="l00371"></a><span class="lineno">  371</span>&#160;                <span class="keywordflow">if</span> (this.hasTag(version) || version.equalsIgnoreCase(remoteVersion)) {</div>
+<div class="line"><a name="l00372"></a><span class="lineno">  372</span>&#160;                    <span class="comment">// We already have the latest version, or this build is tagged for no-update</span></div>
+<div class="line"><a name="l00373"></a><span class="lineno">  373</span>&#160;                    this.result = Updater.UpdateResult.NO_UPDATE;</div>
+<div class="line"><a name="l00374"></a><span class="lineno">  374</span>&#160;                    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00375"></a><span class="lineno">  375</span>&#160;                }</div>
+<div class="line"><a name="l00376"></a><span class="lineno">  376</span>&#160;            } <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00377"></a><span class="lineno">  377</span>&#160;                <span class="comment">// The file&#39;s name did not contain the string &#39;vVersion&#39;</span></div>
+<div class="line"><a name="l00378"></a><span class="lineno">  378</span>&#160;                <span class="keyword">final</span> String authorInfo = this.plugin.getDescription().getAuthors().size() == 0 ? <span class="stringliteral">&quot;&quot;</span> : <span class="stringliteral">&quot; (&quot;</span> + this.plugin.getDescription().getAuthors().<span class="keyword">get</span>(0) + <span class="stringliteral">&quot;)&quot;</span>;</div>
+<div class="line"><a name="l00379"></a><span class="lineno">  379</span>&#160;                this.plugin.getLogger().warning(<span class="stringliteral">&quot;The author of this plugin&quot;</span> + authorInfo + <span class="stringliteral">&quot; has misconfigured their Auto Update system&quot;</span>);</div>
+<div class="line"><a name="l00380"></a><span class="lineno">  380</span>&#160;                this.plugin.getLogger().warning(<span class="stringliteral">&quot;File versions should follow the format &#39;PluginName vVERSION&#39;&quot;</span>);</div>
+<div class="line"><a name="l00381"></a><span class="lineno">  381</span>&#160;                this.plugin.getLogger().warning(<span class="stringliteral">&quot;Please notify the author of this error.&quot;</span>);</div>
+<div class="line"><a name="l00382"></a><span class="lineno">  382</span>&#160;                this.result = Updater.UpdateResult.FAIL_NOVERSION;</div>
+<div class="line"><a name="l00383"></a><span class="lineno">  383</span>&#160;                <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00384"></a><span class="lineno">  384</span>&#160;            }</div>
+<div class="line"><a name="l00385"></a><span class="lineno">  385</span>&#160;        }</div>
+<div class="line"><a name="l00386"></a><span class="lineno">  386</span>&#160;</div>
+<div class="line"><a name="l00387"></a><span class="lineno">  387</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00388"></a><span class="lineno">  388</span>&#160;    }</div>
 <div class="line"><a name="l00389"></a><span class="lineno">  389</span>&#160;</div>
-<div class="line"><a name="l00390"></a><span class="lineno">  390</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><a name="l00391"></a><span class="lineno">  391</span>&#160;    }</div>
-<div class="line"><a name="l00392"></a><span class="lineno">  392</span>&#160;</div>
-<div class="line"><a name="l00396"></a><span class="lineno">  396</span>&#160;    <span class="keyword">private</span> <span class="keywordtype">boolean</span> hasTag(String version) {</div>
-<div class="line"><a name="l00397"></a><span class="lineno">  397</span>&#160;        <span class="keywordflow">for</span> (<span class="keyword">final</span> String <span class="keywordtype">string</span> : <a class="code" href="classca_1_1q0r_1_1mchat_1_1updater_1_1_updater.html#a67670e6f908a2da5de175f773f457349">Updater</a>.NO_UPDATE_TAG) {</div>
-<div class="line"><a name="l00398"></a><span class="lineno">  398</span>&#160;            <span class="keywordflow">if</span> (version.contains(<span class="keywordtype">string</span>)) {</div>
-<div class="line"><a name="l00399"></a><span class="lineno">  399</span>&#160;                <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><a name="l00400"></a><span class="lineno">  400</span>&#160;            }</div>
-<div class="line"><a name="l00401"></a><span class="lineno">  401</span>&#160;        }</div>
-<div class="line"><a name="l00402"></a><span class="lineno">  402</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00403"></a><span class="lineno">  403</span>&#160;    }</div>
-<div class="line"><a name="l00404"></a><span class="lineno">  404</span>&#160;</div>
-<div class="line"><a name="l00405"></a><span class="lineno">  405</span>&#160;    <span class="keyword">private</span> <span class="keywordtype">boolean</span> read() {</div>
-<div class="line"><a name="l00406"></a><span class="lineno">  406</span>&#160;        <span class="keywordflow">try</span> {</div>
-<div class="line"><a name="l00407"></a><span class="lineno">  407</span>&#160;            <span class="keyword">final</span> URLConnection conn = this.url.openConnection();</div>
-<div class="line"><a name="l00408"></a><span class="lineno">  408</span>&#160;            conn.setConnectTimeout(5000);</div>
-<div class="line"><a name="l00409"></a><span class="lineno">  409</span>&#160;</div>
-<div class="line"><a name="l00410"></a><span class="lineno">  410</span>&#160;            <span class="keywordflow">if</span> (this.apiKey != null) {</div>
-<div class="line"><a name="l00411"></a><span class="lineno">  411</span>&#160;                conn.addRequestProperty(<span class="stringliteral">&quot;X-API-Key&quot;</span>, this.apiKey);</div>
-<div class="line"><a name="l00412"></a><span class="lineno">  412</span>&#160;            }</div>
-<div class="line"><a name="l00413"></a><span class="lineno">  413</span>&#160;            conn.addRequestProperty(<span class="stringliteral">&quot;User-Agent&quot;</span>, <span class="stringliteral">&quot;Updater (by Gravity)&quot;</span>);</div>
-<div class="line"><a name="l00414"></a><span class="lineno">  414</span>&#160;</div>
-<div class="line"><a name="l00415"></a><span class="lineno">  415</span>&#160;            conn.setDoOutput(<span class="keyword">true</span>);</div>
+<div class="line"><a name="l00393"></a><span class="lineno">  393</span>&#160;    <span class="keyword">private</span> <span class="keywordtype">boolean</span> hasTag(String version) {</div>
+<div class="line"><a name="l00394"></a><span class="lineno">  394</span>&#160;        <span class="keywordflow">for</span> (<span class="keyword">final</span> String <span class="keywordtype">string</span> : <a class="code" href="classca_1_1q0r_1_1mchat_1_1updater_1_1_updater.html#a67670e6f908a2da5de175f773f457349">Updater</a>.NO_UPDATE_TAG) {</div>
+<div class="line"><a name="l00395"></a><span class="lineno">  395</span>&#160;            <span class="keywordflow">if</span> (version.contains(<span class="keywordtype">string</span>)) {</div>
+<div class="line"><a name="l00396"></a><span class="lineno">  396</span>&#160;                <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00397"></a><span class="lineno">  397</span>&#160;            }</div>
+<div class="line"><a name="l00398"></a><span class="lineno">  398</span>&#160;        }</div>
+<div class="line"><a name="l00399"></a><span class="lineno">  399</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00400"></a><span class="lineno">  400</span>&#160;    }</div>
+<div class="line"><a name="l00401"></a><span class="lineno">  401</span>&#160;</div>
+<div class="line"><a name="l00402"></a><span class="lineno">  402</span>&#160;    <span class="keyword">private</span> <span class="keywordtype">boolean</span> read() {</div>
+<div class="line"><a name="l00403"></a><span class="lineno">  403</span>&#160;        <span class="keywordflow">try</span> {</div>
+<div class="line"><a name="l00404"></a><span class="lineno">  404</span>&#160;            <span class="keyword">final</span> URLConnection conn = this.url.openConnection();</div>
+<div class="line"><a name="l00405"></a><span class="lineno">  405</span>&#160;            conn.setConnectTimeout(5000);</div>
+<div class="line"><a name="l00406"></a><span class="lineno">  406</span>&#160;</div>
+<div class="line"><a name="l00407"></a><span class="lineno">  407</span>&#160;            <span class="keywordflow">if</span> (this.apiKey != null) {</div>
+<div class="line"><a name="l00408"></a><span class="lineno">  408</span>&#160;                conn.addRequestProperty(<span class="stringliteral">&quot;X-API-Key&quot;</span>, this.apiKey);</div>
+<div class="line"><a name="l00409"></a><span class="lineno">  409</span>&#160;            }</div>
+<div class="line"><a name="l00410"></a><span class="lineno">  410</span>&#160;            conn.addRequestProperty(<span class="stringliteral">&quot;User-Agent&quot;</span>, <span class="stringliteral">&quot;Updater (by Gravity)&quot;</span>);</div>
+<div class="line"><a name="l00411"></a><span class="lineno">  411</span>&#160;</div>
+<div class="line"><a name="l00412"></a><span class="lineno">  412</span>&#160;            conn.setDoOutput(<span class="keyword">true</span>);</div>
+<div class="line"><a name="l00413"></a><span class="lineno">  413</span>&#160;</div>
+<div class="line"><a name="l00414"></a><span class="lineno">  414</span>&#160;            <span class="keyword">final</span> BufferedReader reader = <span class="keyword">new</span> BufferedReader(<span class="keyword">new</span> InputStreamReader(conn.getInputStream()));</div>
+<div class="line"><a name="l00415"></a><span class="lineno">  415</span>&#160;            <span class="keyword">final</span> String response = reader.readLine();</div>
 <div class="line"><a name="l00416"></a><span class="lineno">  416</span>&#160;</div>
-<div class="line"><a name="l00417"></a><span class="lineno">  417</span>&#160;            <span class="keyword">final</span> BufferedReader reader = <span class="keyword">new</span> BufferedReader(<span class="keyword">new</span> InputStreamReader(conn.getInputStream()));</div>
-<div class="line"><a name="l00418"></a><span class="lineno">  418</span>&#160;            <span class="keyword">final</span> String response = reader.readLine();</div>
-<div class="line"><a name="l00419"></a><span class="lineno">  419</span>&#160;</div>
-<div class="line"><a name="l00420"></a><span class="lineno">  420</span>&#160;            <span class="keyword">final</span> JSONArray array = (JSONArray) JSONValue.parse(response);</div>
-<div class="line"><a name="l00421"></a><span class="lineno">  421</span>&#160;</div>
-<div class="line"><a name="l00422"></a><span class="lineno">  422</span>&#160;            <span class="keywordflow">if</span> (array.size() == 0) {</div>
-<div class="line"><a name="l00423"></a><span class="lineno">  423</span>&#160;                this.plugin.getLogger().warning(<span class="stringliteral">&quot;The updater could not find any files for the project id &quot;</span> + this.<span class="keywordtype">id</span>);</div>
-<div class="line"><a name="l00424"></a><span class="lineno">  424</span>&#160;                this.result = <a class="code" href="enumca_1_1q0r_1_1mchat_1_1updater_1_1_updater_1_1_update_result.html#a7e3e9283de537aa46d32a62e2076cbab">UpdateResult.FAIL_BADID</a>;</div>
-<div class="line"><a name="l00425"></a><span class="lineno">  425</span>&#160;                <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00426"></a><span class="lineno">  426</span>&#160;            }</div>
-<div class="line"><a name="l00427"></a><span class="lineno">  427</span>&#160;</div>
-<div class="line"><a name="l00428"></a><span class="lineno">  428</span>&#160;            this.versionName = (String) ((JSONObject) array.get(array.size() - 1)).<span class="keyword">get</span>(<a class="code" href="classca_1_1q0r_1_1mchat_1_1updater_1_1_updater.html#a67670e6f908a2da5de175f773f457349">Updater</a>.TITLE_VALUE);</div>
-<div class="line"><a name="l00429"></a><span class="lineno">  429</span>&#160;            this.versionLink = (String) ((JSONObject) array.get(array.size() - 1)).<span class="keyword">get</span>(<a class="code" href="classca_1_1q0r_1_1mchat_1_1updater_1_1_updater.html#a67670e6f908a2da5de175f773f457349">Updater</a>.LINK_VALUE);</div>
-<div class="line"><a name="l00430"></a><span class="lineno">  430</span>&#160;            this.versionType = (String) ((JSONObject) array.get(array.size() - 1)).<span class="keyword">get</span>(<a class="code" href="classca_1_1q0r_1_1mchat_1_1updater_1_1_updater.html#a67670e6f908a2da5de175f773f457349">Updater</a>.TYPE_VALUE);</div>
-<div class="line"><a name="l00431"></a><span class="lineno">  431</span>&#160;            this.versionGameVersion = (String) ((JSONObject) array.get(array.size() - 1)).<span class="keyword">get</span>(<a class="code" href="classca_1_1q0r_1_1mchat_1_1updater_1_1_updater.html#a67670e6f908a2da5de175f773f457349">Updater</a>.VERSION_VALUE);</div>
-<div class="line"><a name="l00432"></a><span class="lineno">  432</span>&#160;</div>
-<div class="line"><a name="l00433"></a><span class="lineno">  433</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><a name="l00434"></a><span class="lineno">  434</span>&#160;        } <span class="keywordflow">catch</span> (<span class="keyword">final</span> IOException e) {</div>
-<div class="line"><a name="l00435"></a><span class="lineno">  435</span>&#160;            <span class="keywordflow">if</span> (e.getMessage().contains(<span class="stringliteral">&quot;HTTP response code: 403&quot;</span>)) {</div>
-<div class="line"><a name="l00436"></a><span class="lineno">  436</span>&#160;                this.plugin.getLogger().warning(<span class="stringliteral">&quot;dev.bukkit.org rejected the API key provided in plugins/Updater/config.yml&quot;</span>);</div>
-<div class="line"><a name="l00437"></a><span class="lineno">  437</span>&#160;                this.plugin.getLogger().warning(<span class="stringliteral">&quot;Please double-check your configuration to ensure it is correct.&quot;</span>);</div>
-<div class="line"><a name="l00438"></a><span class="lineno">  438</span>&#160;                this.result = <a class="code" href="enumca_1_1q0r_1_1mchat_1_1updater_1_1_updater_1_1_update_result.html#af3b71af07266b6f8e51db1485a51b8f1">UpdateResult.FAIL_APIKEY</a>;</div>
-<div class="line"><a name="l00439"></a><span class="lineno">  439</span>&#160;            } <span class="keywordflow">else</span> {</div>
-<div class="line"><a name="l00440"></a><span class="lineno">  440</span>&#160;                this.plugin.getLogger().warning(<span class="stringliteral">&quot;The updater could not contact dev.bukkit.org for updating.&quot;</span>);</div>
-<div class="line"><a name="l00441"></a><span class="lineno">  441</span>&#160;                this.plugin.getLogger().warning(<span class="stringliteral">&quot;If you have not recently modified your configuration and this is the first time you are seeing this message, the site may be experiencing temporary downtime.&quot;</span>);</div>
-<div class="line"><a name="l00442"></a><span class="lineno">  442</span>&#160;                this.result = <a class="code" href="enumca_1_1q0r_1_1mchat_1_1updater_1_1_updater_1_1_update_result.html#a72713f0c1eb539376fed2ae06970631a">UpdateResult.FAIL_DBO</a>;</div>
-<div class="line"><a name="l00443"></a><span class="lineno">  443</span>&#160;            }</div>
-<div class="line"><a name="l00444"></a><span class="lineno">  444</span>&#160;            e.printStackTrace();</div>
-<div class="line"><a name="l00445"></a><span class="lineno">  445</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00446"></a><span class="lineno">  446</span>&#160;        }</div>
-<div class="line"><a name="l00447"></a><span class="lineno">  447</span>&#160;    }</div>
-<div class="line"><a name="l00448"></a><span class="lineno">  448</span>&#160;</div>
-<div class="line"><a name="l00449"></a><span class="lineno">  449</span>&#160;    <span class="keyword">private</span> <span class="keyword">class </span>UpdateRunnable <span class="keyword">implements</span> Runnable {</div>
-<div class="line"><a name="l00450"></a><span class="lineno">  450</span>&#160;</div>
-<div class="line"><a name="l00451"></a><span class="lineno">  451</span>&#160;        @Override</div>
-<div class="line"><a name="l00452"></a><span class="lineno">  452</span>&#160;        <span class="keyword">public</span> <span class="keywordtype">void</span> run() {</div>
-<div class="line"><a name="l00453"></a><span class="lineno">  453</span>&#160;            <span class="keywordflow">if</span> (<a class="code" href="classca_1_1q0r_1_1mchat_1_1updater_1_1_updater.html#a67670e6f908a2da5de175f773f457349">Updater</a>.this.url != null) {</div>
-<div class="line"><a name="l00454"></a><span class="lineno">  454</span>&#160;                <span class="comment">// Obtain the results of the project&#39;s file feed</span></div>
-<div class="line"><a name="l00455"></a><span class="lineno">  455</span>&#160;                <span class="keywordflow">if</span> (<a class="code" href="classca_1_1q0r_1_1mchat_1_1updater_1_1_updater.html#a67670e6f908a2da5de175f773f457349">Updater</a>.this.read()) {</div>
-<div class="line"><a name="l00456"></a><span class="lineno">  456</span>&#160;                    <span class="keywordflow">if</span> (<a class="code" href="classca_1_1q0r_1_1mchat_1_1updater_1_1_updater.html#a67670e6f908a2da5de175f773f457349">Updater</a>.this.versionCheck(<a class="code" href="classca_1_1q0r_1_1mchat_1_1updater_1_1_updater.html#a67670e6f908a2da5de175f773f457349">Updater</a>.this.versionName)) {</div>
-<div class="line"><a name="l00457"></a><span class="lineno">  457</span>&#160;                        <span class="keywordflow">if</span> ((<a class="code" href="classca_1_1q0r_1_1mchat_1_1updater_1_1_updater.html#a67670e6f908a2da5de175f773f457349">Updater</a>.this.versionLink != null) &amp;&amp; (Updater.this.type != <a class="code" href="enumca_1_1q0r_1_1mchat_1_1updater_1_1_updater_1_1_update_type.html#a6a80d7537f44a924c1e13905caa43937">UpdateType.NO_DOWNLOAD</a>)) {</div>
-<div class="line"><a name="l00458"></a><span class="lineno">  458</span>&#160;                            String name = Updater.this.file.getName();</div>
-<div class="line"><a name="l00459"></a><span class="lineno">  459</span>&#160;                            <span class="comment">// If it&#39;s a zip file, it shouldn&#39;t be downloaded as the plugin&#39;s name</span></div>
-<div class="line"><a name="l00460"></a><span class="lineno">  460</span>&#160;                            <span class="keywordflow">if</span> (<a class="code" href="classca_1_1q0r_1_1mchat_1_1updater_1_1_updater.html#a67670e6f908a2da5de175f773f457349">Updater</a>.this.versionLink.endsWith(<span class="stringliteral">&quot;.zip&quot;</span>)) {</div>
-<div class="line"><a name="l00461"></a><span class="lineno">  461</span>&#160;                                <span class="keyword">final</span> String[] split = Updater.this.versionLink.split(<span class="stringliteral">&quot;/&quot;</span>);</div>
-<div class="line"><a name="l00462"></a><span class="lineno">  462</span>&#160;                                name = split[split.length - 1];</div>
-<div class="line"><a name="l00463"></a><span class="lineno">  463</span>&#160;                            }</div>
-<div class="line"><a name="l00464"></a><span class="lineno">  464</span>&#160;                            Updater.this.saveFile(<span class="keyword">new</span> File(<a class="code" href="classca_1_1q0r_1_1mchat_1_1updater_1_1_updater.html#a67670e6f908a2da5de175f773f457349">Updater</a>.this.plugin.getDataFolder().getParent(), <a class="code" href="classca_1_1q0r_1_1mchat_1_1updater_1_1_updater.html#a67670e6f908a2da5de175f773f457349">Updater</a>.this.updateFolder), name, Updater.this.versionLink);</div>
-<div class="line"><a name="l00465"></a><span class="lineno">  465</span>&#160;                        } <span class="keywordflow">else</span> {</div>
-<div class="line"><a name="l00466"></a><span class="lineno">  466</span>&#160;                            Updater.this.result = <a class="code" href="enumca_1_1q0r_1_1mchat_1_1updater_1_1_updater_1_1_update_result.html#ab67e11424d2b8501846a7b3297d598c8">UpdateResult.UPDATE_AVAILABLE</a>;</div>
-<div class="line"><a name="l00467"></a><span class="lineno">  467</span>&#160;                        }</div>
-<div class="line"><a name="l00468"></a><span class="lineno">  468</span>&#160;                    }</div>
-<div class="line"><a name="l00469"></a><span class="lineno">  469</span>&#160;                }</div>
-<div class="line"><a name="l00470"></a><span class="lineno">  470</span>&#160;            }</div>
-<div class="line"><a name="l00471"></a><span class="lineno">  471</span>&#160;        }</div>
-<div class="line"><a name="l00472"></a><span class="lineno">  472</span>&#160;    }</div>
-<div class="line"><a name="l00473"></a><span class="lineno">  473</span>&#160;}</div>
+<div class="line"><a name="l00417"></a><span class="lineno">  417</span>&#160;            <span class="keyword">final</span> JSONArray array = (JSONArray) JSONValue.parse(response);</div>
+<div class="line"><a name="l00418"></a><span class="lineno">  418</span>&#160;</div>
+<div class="line"><a name="l00419"></a><span class="lineno">  419</span>&#160;            <span class="keywordflow">if</span> (array.size() == 0) {</div>
+<div class="line"><a name="l00420"></a><span class="lineno">  420</span>&#160;                this.plugin.getLogger().warning(<span class="stringliteral">&quot;The updater could not find any files for the project id &quot;</span> + this.<span class="keywordtype">id</span>);</div>
+<div class="line"><a name="l00421"></a><span class="lineno">  421</span>&#160;                this.result = <a class="code" href="enumca_1_1q0r_1_1mchat_1_1updater_1_1_updater_1_1_update_result.html#a7e3e9283de537aa46d32a62e2076cbab">UpdateResult.FAIL_BADID</a>;</div>
+<div class="line"><a name="l00422"></a><span class="lineno">  422</span>&#160;                <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00423"></a><span class="lineno">  423</span>&#160;            }</div>
+<div class="line"><a name="l00424"></a><span class="lineno">  424</span>&#160;</div>
+<div class="line"><a name="l00425"></a><span class="lineno">  425</span>&#160;            this.versionName = (String) ((JSONObject) array.get(array.size() - 1)).<span class="keyword">get</span>(<a class="code" href="classca_1_1q0r_1_1mchat_1_1updater_1_1_updater.html#a67670e6f908a2da5de175f773f457349">Updater</a>.TITLE_VALUE);</div>
+<div class="line"><a name="l00426"></a><span class="lineno">  426</span>&#160;            this.versionLink = (String) ((JSONObject) array.get(array.size() - 1)).<span class="keyword">get</span>(<a class="code" href="classca_1_1q0r_1_1mchat_1_1updater_1_1_updater.html#a67670e6f908a2da5de175f773f457349">Updater</a>.LINK_VALUE);</div>
+<div class="line"><a name="l00427"></a><span class="lineno">  427</span>&#160;            this.versionType = (String) ((JSONObject) array.get(array.size() - 1)).<span class="keyword">get</span>(<a class="code" href="classca_1_1q0r_1_1mchat_1_1updater_1_1_updater.html#a67670e6f908a2da5de175f773f457349">Updater</a>.TYPE_VALUE);</div>
+<div class="line"><a name="l00428"></a><span class="lineno">  428</span>&#160;            this.versionGameVersion = (String) ((JSONObject) array.get(array.size() - 1)).<span class="keyword">get</span>(<a class="code" href="classca_1_1q0r_1_1mchat_1_1updater_1_1_updater.html#a67670e6f908a2da5de175f773f457349">Updater</a>.VERSION_VALUE);</div>
+<div class="line"><a name="l00429"></a><span class="lineno">  429</span>&#160;</div>
+<div class="line"><a name="l00430"></a><span class="lineno">  430</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00431"></a><span class="lineno">  431</span>&#160;        } <span class="keywordflow">catch</span> (<span class="keyword">final</span> IOException e) {</div>
+<div class="line"><a name="l00432"></a><span class="lineno">  432</span>&#160;            <span class="keywordflow">if</span> (e.getMessage().contains(<span class="stringliteral">&quot;HTTP response code: 403&quot;</span>)) {</div>
+<div class="line"><a name="l00433"></a><span class="lineno">  433</span>&#160;                this.plugin.getLogger().warning(<span class="stringliteral">&quot;dev.bukkit.org rejected the API key provided in plugins/Updater/config.yml&quot;</span>);</div>
+<div class="line"><a name="l00434"></a><span class="lineno">  434</span>&#160;                this.plugin.getLogger().warning(<span class="stringliteral">&quot;Please double-check your configuration to ensure it is correct.&quot;</span>);</div>
+<div class="line"><a name="l00435"></a><span class="lineno">  435</span>&#160;                this.result = <a class="code" href="enumca_1_1q0r_1_1mchat_1_1updater_1_1_updater_1_1_update_result.html#af3b71af07266b6f8e51db1485a51b8f1">UpdateResult.FAIL_APIKEY</a>;</div>
+<div class="line"><a name="l00436"></a><span class="lineno">  436</span>&#160;            } <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00437"></a><span class="lineno">  437</span>&#160;                this.plugin.getLogger().warning(<span class="stringliteral">&quot;The updater could not contact dev.bukkit.org for updating.&quot;</span>);</div>
+<div class="line"><a name="l00438"></a><span class="lineno">  438</span>&#160;                this.plugin.getLogger().warning(<span class="stringliteral">&quot;If you have not recently modified your configuration and this is the first time you are seeing this message, the site may be experiencing temporary downtime.&quot;</span>);</div>
+<div class="line"><a name="l00439"></a><span class="lineno">  439</span>&#160;                this.result = <a class="code" href="enumca_1_1q0r_1_1mchat_1_1updater_1_1_updater_1_1_update_result.html#a72713f0c1eb539376fed2ae06970631a">UpdateResult.FAIL_DBO</a>;</div>
+<div class="line"><a name="l00440"></a><span class="lineno">  440</span>&#160;            }</div>
+<div class="line"><a name="l00441"></a><span class="lineno">  441</span>&#160;            e.printStackTrace();</div>
+<div class="line"><a name="l00442"></a><span class="lineno">  442</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00443"></a><span class="lineno">  443</span>&#160;        }</div>
+<div class="line"><a name="l00444"></a><span class="lineno">  444</span>&#160;    }</div>
+<div class="line"><a name="l00445"></a><span class="lineno">  445</span>&#160;</div>
+<div class="line"><a name="l00446"></a><span class="lineno">  446</span>&#160;    <span class="keyword">private</span> <span class="keyword">class </span>UpdateRunnable <span class="keyword">implements</span> Runnable {</div>
+<div class="line"><a name="l00447"></a><span class="lineno">  447</span>&#160;</div>
+<div class="line"><a name="l00448"></a><span class="lineno">  448</span>&#160;        @Override</div>
+<div class="line"><a name="l00449"></a><span class="lineno">  449</span>&#160;        <span class="keyword">public</span> <span class="keywordtype">void</span> run() {</div>
+<div class="line"><a name="l00450"></a><span class="lineno">  450</span>&#160;            <span class="keywordflow">if</span> (<a class="code" href="classca_1_1q0r_1_1mchat_1_1updater_1_1_updater.html#a67670e6f908a2da5de175f773f457349">Updater</a>.this.url != null) {</div>
+<div class="line"><a name="l00451"></a><span class="lineno">  451</span>&#160;                <span class="comment">// Obtain the results of the project&#39;s file feed</span></div>
+<div class="line"><a name="l00452"></a><span class="lineno">  452</span>&#160;                <span class="keywordflow">if</span> (<a class="code" href="classca_1_1q0r_1_1mchat_1_1updater_1_1_updater.html#a67670e6f908a2da5de175f773f457349">Updater</a>.this.read()) {</div>
+<div class="line"><a name="l00453"></a><span class="lineno">  453</span>&#160;                    <span class="keywordflow">if</span> (<a class="code" href="classca_1_1q0r_1_1mchat_1_1updater_1_1_updater.html#a67670e6f908a2da5de175f773f457349">Updater</a>.this.versionCheck(<a class="code" href="classca_1_1q0r_1_1mchat_1_1updater_1_1_updater.html#a67670e6f908a2da5de175f773f457349">Updater</a>.this.versionName)) {</div>
+<div class="line"><a name="l00454"></a><span class="lineno">  454</span>&#160;                        <span class="keywordflow">if</span> ((<a class="code" href="classca_1_1q0r_1_1mchat_1_1updater_1_1_updater.html#a67670e6f908a2da5de175f773f457349">Updater</a>.this.versionLink != null) &amp;&amp; (Updater.this.type != <a class="code" href="enumca_1_1q0r_1_1mchat_1_1updater_1_1_updater_1_1_update_type.html#a6a80d7537f44a924c1e13905caa43937">UpdateType.NO_DOWNLOAD</a>)) {</div>
+<div class="line"><a name="l00455"></a><span class="lineno">  455</span>&#160;                            String name = Updater.this.file.getName();</div>
+<div class="line"><a name="l00456"></a><span class="lineno">  456</span>&#160;                            <span class="comment">// If it&#39;s a zip file, it shouldn&#39;t be downloaded as the plugin&#39;s name</span></div>
+<div class="line"><a name="l00457"></a><span class="lineno">  457</span>&#160;                            <span class="keywordflow">if</span> (<a class="code" href="classca_1_1q0r_1_1mchat_1_1updater_1_1_updater.html#a67670e6f908a2da5de175f773f457349">Updater</a>.this.versionLink.endsWith(<span class="stringliteral">&quot;.zip&quot;</span>)) {</div>
+<div class="line"><a name="l00458"></a><span class="lineno">  458</span>&#160;                                <span class="keyword">final</span> String[] split = Updater.this.versionLink.split(<span class="stringliteral">&quot;/&quot;</span>);</div>
+<div class="line"><a name="l00459"></a><span class="lineno">  459</span>&#160;                                name = split[split.length - 1];</div>
+<div class="line"><a name="l00460"></a><span class="lineno">  460</span>&#160;                            }</div>
+<div class="line"><a name="l00461"></a><span class="lineno">  461</span>&#160;                            Updater.this.saveFile(<span class="keyword">new</span> File(<a class="code" href="classca_1_1q0r_1_1mchat_1_1updater_1_1_updater.html#a67670e6f908a2da5de175f773f457349">Updater</a>.this.plugin.getDataFolder().getParent(), <a class="code" href="classca_1_1q0r_1_1mchat_1_1updater_1_1_updater.html#a67670e6f908a2da5de175f773f457349">Updater</a>.this.updateFolder), name, Updater.this.versionLink);</div>
+<div class="line"><a name="l00462"></a><span class="lineno">  462</span>&#160;                        } <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00463"></a><span class="lineno">  463</span>&#160;                            Updater.this.result = <a class="code" href="enumca_1_1q0r_1_1mchat_1_1updater_1_1_updater_1_1_update_result.html#ab67e11424d2b8501846a7b3297d598c8">UpdateResult.UPDATE_AVAILABLE</a>;</div>
+<div class="line"><a name="l00464"></a><span class="lineno">  464</span>&#160;                        }</div>
+<div class="line"><a name="l00465"></a><span class="lineno">  465</span>&#160;                    }</div>
+<div class="line"><a name="l00466"></a><span class="lineno">  466</span>&#160;                }</div>
+<div class="line"><a name="l00467"></a><span class="lineno">  467</span>&#160;            }</div>
+<div class="line"><a name="l00468"></a><span class="lineno">  468</span>&#160;        }</div>
+<div class="line"><a name="l00469"></a><span class="lineno">  469</span>&#160;    }</div>
+<div class="line"><a name="l00470"></a><span class="lineno">  470</span>&#160;}</div>
 <div class="ttc" id="enumca_1_1q0r_1_1mchat_1_1updater_1_1_updater_1_1_update_result_html_af9d507e48419b192798470ee2650db1d"><div class="ttname"><a href="enumca_1_1q0r_1_1mchat_1_1updater_1_1_updater_1_1_update_result.html#af9d507e48419b192798470ee2650db1d">ca.q0r.mchat.updater.Updater.UpdateResult.SUCCESS</a></div><div class="ttdeci">SUCCESS</div><div class="ttdoc">The updater found an update, and has readied it to be loaded the next time the server restarts/reload...</div><div class="ttdef"><b>Definition:</b> <a href="_updater_8java_source.html#l00077">Updater.java:77</a></div></div>
 <div class="ttc" id="enumca_1_1q0r_1_1mchat_1_1updater_1_1_updater_1_1_update_result_html_af3b71af07266b6f8e51db1485a51b8f1"><div class="ttname"><a href="enumca_1_1q0r_1_1mchat_1_1updater_1_1_updater_1_1_update_result.html#af3b71af07266b6f8e51db1485a51b8f1">ca.q0r.mchat.updater.Updater.UpdateResult.FAIL_APIKEY</a></div><div class="ttdeci">FAIL_APIKEY</div><div class="ttdoc">The server administrator has improperly configured their API key in the configuration. </div><div class="ttdef"><b>Definition:</b> <a href="_updater_8java_source.html#l00105">Updater.java:105</a></div></div>
 <div class="ttc" id="enumca_1_1q0r_1_1mchat_1_1updater_1_1_updater_1_1_update_result_html_a7e3e9283de537aa46d32a62e2076cbab"><div class="ttname"><a href="enumca_1_1q0r_1_1mchat_1_1updater_1_1_updater_1_1_update_result.html#a7e3e9283de537aa46d32a62e2076cbab">ca.q0r.mchat.updater.Updater.UpdateResult.FAIL_BADID</a></div><div class="ttdeci">FAIL_BADID</div><div class="ttdoc">The id provided by the plugin running the updater was invalid and doesn&#39;t exist on DBO...</div><div class="ttdef"><b>Definition:</b> <a href="_updater_8java_source.html#l00101">Updater.java:101</a></div></div>
@@ -502,7 +499,7 @@ $(document).ready(function(){initNavTree('_updater_8java_source.html','');});
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_9ab6a3f522e5d63d6ccdddae912fa76f.html">src</a></li><li class="navelem"><a class="el" href="dir_382e451258b48e24460996caf994e302.html">main</a></li><li class="navelem"><a class="el" href="dir_0be6c0ecb0223935c290bd1cb3729cba.html">java</a></li><li class="navelem"><a class="el" href="dir_e5b8418130c73416fcfb5a006a8fd0dc.html">ca</a></li><li class="navelem"><a class="el" href="dir_1956672f6d95a92f425ca8757b398830.html">q0r</a></li><li class="navelem"><a class="el" href="dir_d1af4a065011d56730d5039704168186.html">mchat</a></li><li class="navelem"><a class="el" href="dir_4b97e3a4453944e2d021b34856960fbc.html">updater</a></li><li class="navelem"><b>Updater.java</b></li>
+    <li class="navelem"><a class="el" href="dir_de422132c9f2af599db455473b5b5523.html">src</a></li><li class="navelem"><a class="el" href="dir_ce2fdb4ece02e99d92fa888df3ceac5b.html">main</a></li><li class="navelem"><a class="el" href="dir_b8b4f8272ce078995c03f702acd02789.html">java</a></li><li class="navelem"><a class="el" href="dir_0db972c30fd3639c281971a7a540eaa6.html">ca</a></li><li class="navelem"><a class="el" href="dir_899a1b718d014a90213968fb638cd849.html">q0r</a></li><li class="navelem"><a class="el" href="dir_ba496915f2f2ad79174f63fbdf3de4ae.html">mchat</a></li><li class="navelem"><a class="el" href="dir_a864f594118f6e4d9fb47b76e9eca10f.html">updater</a></li><li class="navelem"><b>Updater.java</b></li>
     <li class="footer">Generated by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
