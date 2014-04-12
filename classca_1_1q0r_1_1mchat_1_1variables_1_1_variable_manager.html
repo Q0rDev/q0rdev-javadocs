@@ -70,7 +70,6 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
     <ul class="tablist">
       <li><a href="annotated.html"><span>Class&#160;List</span></a></li>
       <li><a href="classes.html"><span>Class&#160;Index</span></a></li>
-      <li><a href="hierarchy.html"><span>Class&#160;Hierarchy</span></a></li>
       <li><a href="functions.html"><span>Class&#160;Members</span></a></li>
     </ul>
   </div>
@@ -127,12 +126,12 @@ static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hre
 <tr class="memitem:ad6a0f4c739a0ed1aa38a887a0b77bd67"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classca_1_1q0r_1_1mchat_1_1variables_1_1_variable_manager.html#ad6a0f4c739a0ed1aa38a887a0b77bd67">addVars</a> (<a class="el" href="classca_1_1q0r_1_1mchat_1_1variables_1_1_var.html">Var</a>[] vars)</td></tr>
 <tr class="memdesc:ad6a0f4c739a0ed1aa38a887a0b77bd67"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds Vars to VarSet.  <a href="#ad6a0f4c739a0ed1aa38a887a0b77bd67">More...</a><br/></td></tr>
 <tr class="separator:ad6a0f4c739a0ed1aa38a887a0b77bd67"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abe581242f1c21fb4c643bd4a1e57c509"><td class="memItemLeft" align="right" valign="top">static String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classca_1_1q0r_1_1mchat_1_1variables_1_1_variable_manager.html#abe581242f1c21fb4c643bd4a1e57c509">replaceVars</a> (String format, String pName, String msg, Boolean doColour)</td></tr>
-<tr class="memdesc:abe581242f1c21fb4c643bd4a1e57c509"><td class="mdescLeft">&#160;</td><td class="mdescRight">Variable Replacer.  <a href="#abe581242f1c21fb4c643bd4a1e57c509">More...</a><br/></td></tr>
-<tr class="separator:abe581242f1c21fb4c643bd4a1e57c509"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1fe5fd9b17f0a64094fcd207c6882351"><td class="memItemLeft" align="right" valign="top">static String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classca_1_1q0r_1_1mchat_1_1variables_1_1_variable_manager.html#a1fe5fd9b17f0a64094fcd207c6882351">replaceCustVars</a> (String pName, String format)</td></tr>
-<tr class="memdesc:a1fe5fd9b17f0a64094fcd207c6882351"><td class="mdescLeft">&#160;</td><td class="mdescRight">Custom Variable Replacer.  <a href="#a1fe5fd9b17f0a64094fcd207c6882351">More...</a><br/></td></tr>
-<tr class="separator:a1fe5fd9b17f0a64094fcd207c6882351"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1062283f03b415cbffbfe86e84d88bf9"><td class="memItemLeft" align="right" valign="top">static String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classca_1_1q0r_1_1mchat_1_1variables_1_1_variable_manager.html#a1062283f03b415cbffbfe86e84d88bf9">replaceVars</a> (String format, UUID uuid, String msg, Boolean doColour)</td></tr>
+<tr class="memdesc:a1062283f03b415cbffbfe86e84d88bf9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Variable Replacer.  <a href="#a1062283f03b415cbffbfe86e84d88bf9">More...</a><br/></td></tr>
+<tr class="separator:a1062283f03b415cbffbfe86e84d88bf9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af19831a204f14e55e95ad9c1ef23b4ce"><td class="memItemLeft" align="right" valign="top">static String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classca_1_1q0r_1_1mchat_1_1variables_1_1_variable_manager.html#af19831a204f14e55e95ad9c1ef23b4ce">replaceCustVars</a> (UUID uuid, String format)</td></tr>
+<tr class="memdesc:af19831a204f14e55e95ad9c1ef23b4ce"><td class="mdescLeft">&#160;</td><td class="mdescRight">Custom Variable Replacer.  <a href="#af19831a204f14e55e95ad9c1ef23b4ce">More...</a><br/></td></tr>
+<tr class="separator:af19831a204f14e55e95ad9c1ef23b4ce"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Manager for Variables. </p>
@@ -207,7 +206,7 @@ static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hre
 
 </div>
 </div>
-<a class="anchor" id="a1fe5fd9b17f0a64094fcd207c6882351"></a>
+<a class="anchor" id="af19831a204f14e55e95ad9c1ef23b4ce"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -217,8 +216,8 @@ static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hre
         <tr>
           <td class="memname">static String ca.q0r.mchat.variables.VariableManager.replaceCustVars </td>
           <td>(</td>
-          <td class="paramtype">String&#160;</td>
-          <td class="paramname"><em>pName</em>, </td>
+          <td class="paramtype">UUID&#160;</td>
+          <td class="paramname"><em>uuid</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -242,7 +241,7 @@ static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hre
 <p>Custom Variable Replacer. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">pName</td><td>Player's Name. </td></tr>
+    <tr><td class="paramname">uuid</td><td>Player's UUID. </td></tr>
     <tr><td class="paramname">format</td><td>String to be replaced. </td></tr>
   </table>
   </dd>
@@ -253,7 +252,7 @@ static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hre
 
 </div>
 </div>
-<a class="anchor" id="abe581242f1c21fb4c643bd4a1e57c509"></a>
+<a class="anchor" id="a1062283f03b415cbffbfe86e84d88bf9"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -269,8 +268,8 @@ static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hre
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">String&#160;</td>
-          <td class="paramname"><em>pName</em>, </td>
+          <td class="paramtype">UUID&#160;</td>
+          <td class="paramname"><em>uuid</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -301,7 +300,7 @@ static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hre
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">format</td><td>String to be replaced. </td></tr>
-    <tr><td class="paramname">pName</td><td>Name of Player being formatted against. </td></tr>
+    <tr><td class="paramname">uuid</td><td>Name of Player being formatted against. </td></tr>
     <tr><td class="paramname">msg</td><td>Message being relayed. </td></tr>
     <tr><td class="paramname">doColour</td><td>Whether or not to colour replacement value. </td></tr>
   </table>

@@ -107,28 +107,28 @@ $(document).ready(function(){initNavTree('_yml_manager_8java_source.html','');})
 <div class="contents">
 <div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="keyword">package </span>ca.q0r.mchat.yml;</div>
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;</div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="keyword">import</span> <a class="code" href="classca_1_1q0r_1_1mchat_1_1yml_1_1censor_1_1_censor_yml.html">ca.q0r.mchat.yml.censor.CensorYml</a>;</div>
-<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="keyword">import</span> <a class="code" href="classca_1_1q0r_1_1mchat_1_1yml_1_1config_1_1_config_yml.html">ca.q0r.mchat.yml.config.ConfigYml</a>;</div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="keyword">import</span> <a class="code" href="classca_1_1q0r_1_1mchat_1_1yml_1_1info_1_1_info_yml.html">ca.q0r.mchat.yml.info.InfoYml</a>;</div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="keyword">import</span> <a class="code" href="classca_1_1q0r_1_1mchat_1_1yml_1_1locale_1_1_locale_yml.html">ca.q0r.mchat.yml.locale.LocaleYml</a>;</div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="keyword">import</span> ca.q0r.mchat.yml.censor.CensorYml;</div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="keyword">import</span> ca.q0r.mchat.yml.config.ConfigYml;</div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="keyword">import</span> ca.q0r.mchat.yml.info.InfoYml;</div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="keyword">import</span> ca.q0r.mchat.yml.locale.LocaleYml;</div>
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;</div>
 <div class="line"><a name="l00011"></a><span class="lineno"><a class="line" href="classca_1_1q0r_1_1mchat_1_1yml_1_1_yml_manager.html">   11</a></span>&#160;<span class="keyword">public</span> <span class="keyword">class </span><a class="code" href="classca_1_1q0r_1_1mchat_1_1yml_1_1_yml_manager.html">YmlManager</a> {</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    <span class="keyword">static</span> <a class="code" href="classca_1_1q0r_1_1mchat_1_1yml_1_1censor_1_1_censor_yml.html">CensorYml</a> censorYml;</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    <span class="keyword">static</span> <a class="code" href="classca_1_1q0r_1_1mchat_1_1yml_1_1config_1_1_config_yml.html">ConfigYml</a> configYml;</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    <span class="keyword">static</span> <a class="code" href="classca_1_1q0r_1_1mchat_1_1yml_1_1info_1_1_info_yml.html">InfoYml</a> infoYml;</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    <span class="keyword">static</span> <a class="code" href="classca_1_1q0r_1_1mchat_1_1yml_1_1locale_1_1_locale_yml.html">LocaleYml</a> localeYml;</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    <span class="keyword">static</span> CensorYml censorYml;</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    <span class="keyword">static</span> ConfigYml configYml;</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    <span class="keyword">static</span> InfoYml infoYml;</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    <span class="keyword">static</span> LocaleYml localeYml;</div>
 <div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;</div>
 <div class="line"><a name="l00020"></a><span class="lineno"><a class="line" href="classca_1_1q0r_1_1mchat_1_1yml_1_1_yml_manager.html#a9251e9450d77ecee68f49491c558d95f">   20</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="classca_1_1q0r_1_1mchat_1_1yml_1_1_yml_manager.html#a9251e9450d77ecee68f49491c558d95f">initialize</a>() {</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;        censorYml = <span class="keyword">new</span> <a class="code" href="classca_1_1q0r_1_1mchat_1_1yml_1_1censor_1_1_censor_yml.html">CensorYml</a>();</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;        censorYml = <span class="keyword">new</span> CensorYml();</div>
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;        censorYml.loadDefaults();</div>
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;        configYml = <span class="keyword">new</span> <a class="code" href="classca_1_1q0r_1_1mchat_1_1yml_1_1config_1_1_config_yml.html">ConfigYml</a>();</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;        configYml = <span class="keyword">new</span> ConfigYml();</div>
 <div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;        configYml.loadDefaults();</div>
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;        infoYml = <span class="keyword">new</span> <a class="code" href="classca_1_1q0r_1_1mchat_1_1yml_1_1info_1_1_info_yml.html">InfoYml</a>();</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;        infoYml = <span class="keyword">new</span> InfoYml();</div>
 <div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;        infoYml.loadDefaults();</div>
 <div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;        localeYml = <span class="keyword">new</span> <a class="code" href="classca_1_1q0r_1_1mchat_1_1yml_1_1locale_1_1_locale_yml.html">LocaleYml</a>();</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;        localeYml = <span class="keyword">new</span> LocaleYml();</div>
 <div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;        localeYml.loadDefaults();</div>
 <div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    }</div>
 <div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;</div>
@@ -150,19 +150,19 @@ $(document).ready(function(){initNavTree('_yml_manager_8java_source.html','');})
 <div class="line"><a name="l00060"></a><span class="lineno"><a class="line" href="classca_1_1q0r_1_1mchat_1_1yml_1_1_yml_manager.html#a3289a0ca70168781c977bb511e4fbc63">   60</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="classca_1_1q0r_1_1mchat_1_1yml_1_1_yml_manager.html#a3289a0ca70168781c977bb511e4fbc63">reloadYml</a>(<a class="code" href="enumca_1_1q0r_1_1mchat_1_1yml_1_1_yml_type.html">YmlType</a> type) {</div>
 <div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;        <span class="keywordflow">switch</span> (type) {</div>
 <div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;            <span class="keywordflow">case</span> CENSOR_YML:</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;                censorYml = <span class="keyword">new</span> <a class="code" href="classca_1_1q0r_1_1mchat_1_1yml_1_1censor_1_1_censor_yml.html">CensorYml</a>();</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;                censorYml = <span class="keyword">new</span> CensorYml();</div>
 <div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;                censorYml.loadDefaults();</div>
 <div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;                <span class="keywordflow">break</span>;</div>
 <div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;            <span class="keywordflow">case</span> CONFIG_YML:</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;                configYml = <span class="keyword">new</span> <a class="code" href="classca_1_1q0r_1_1mchat_1_1yml_1_1config_1_1_config_yml.html">ConfigYml</a>();</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;                configYml = <span class="keyword">new</span> ConfigYml();</div>
 <div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;                configYml.loadDefaults();</div>
 <div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;                <span class="keywordflow">break</span>;</div>
 <div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;            <span class="keywordflow">case</span> INFO_YML:</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;                infoYml = <span class="keyword">new</span> <a class="code" href="classca_1_1q0r_1_1mchat_1_1yml_1_1info_1_1_info_yml.html">InfoYml</a>();</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;                infoYml = <span class="keyword">new</span> InfoYml();</div>
 <div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;                infoYml.loadDefaults();</div>
 <div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;                <span class="keywordflow">break</span>;</div>
 <div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;            <span class="keywordflow">case</span> LOCALE_YML:</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;                localeYml = <span class="keyword">new</span> <a class="code" href="classca_1_1q0r_1_1mchat_1_1yml_1_1locale_1_1_locale_yml.html">LocaleYml</a>();</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;                localeYml = <span class="keyword">new</span> LocaleYml();</div>
 <div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;                localeYml.loadDefaults();</div>
 <div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;                <span class="keywordflow">break</span>;</div>
 <div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;        }</div>
@@ -177,11 +177,7 @@ $(document).ready(function(){initNavTree('_yml_manager_8java_source.html','');})
 <div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;}</div>
 <div class="ttc" id="classca_1_1q0r_1_1mchat_1_1yml_1_1_yml_manager_html_a9251e9450d77ecee68f49491c558d95f"><div class="ttname"><a href="classca_1_1q0r_1_1mchat_1_1yml_1_1_yml_manager.html#a9251e9450d77ecee68f49491c558d95f">ca.q0r.mchat.yml.YmlManager.initialize</a></div><div class="ttdeci">static void initialize()</div><div class="ttdoc">Class Initializer. </div><div class="ttdef"><b>Definition:</b> <a href="_yml_manager_8java_source.html#l00020">YmlManager.java:20</a></div></div>
 <div class="ttc" id="classca_1_1q0r_1_1mchat_1_1yml_1_1_yml_html"><div class="ttname"><a href="classca_1_1q0r_1_1mchat_1_1yml_1_1_yml.html">ca.q0r.mchat.yml.Yml</a></div><div class="ttdoc">Parent class for all YML configs. </div><div class="ttdef"><b>Definition:</b> <a href="_yml_8java_source.html#l00010">Yml.java:10</a></div></div>
-<div class="ttc" id="classca_1_1q0r_1_1mchat_1_1yml_1_1config_1_1_config_yml_html"><div class="ttname"><a href="classca_1_1q0r_1_1mchat_1_1yml_1_1config_1_1_config_yml.html">ca.q0r.mchat.yml.config.ConfigYml</a></div><div class="ttdef"><b>Definition:</b> <a href="_config_yml_8java_source.html#l00011">ConfigYml.java:11</a></div></div>
-<div class="ttc" id="classca_1_1q0r_1_1mchat_1_1yml_1_1info_1_1_info_yml_html"><div class="ttname"><a href="classca_1_1q0r_1_1mchat_1_1yml_1_1info_1_1_info_yml.html">ca.q0r.mchat.yml.info.InfoYml</a></div><div class="ttdef"><b>Definition:</b> <a href="_info_yml_8java_source.html#l00007">InfoYml.java:7</a></div></div>
-<div class="ttc" id="classca_1_1q0r_1_1mchat_1_1yml_1_1censor_1_1_censor_yml_html"><div class="ttname"><a href="classca_1_1q0r_1_1mchat_1_1yml_1_1censor_1_1_censor_yml.html">ca.q0r.mchat.yml.censor.CensorYml</a></div><div class="ttdef"><b>Definition:</b> <a href="_censor_yml_8java_source.html#l00007">CensorYml.java:7</a></div></div>
 <div class="ttc" id="classca_1_1q0r_1_1mchat_1_1yml_1_1_yml_manager_html_a3c7eeb24147ed29581fd61ecee236e7f"><div class="ttname"><a href="classca_1_1q0r_1_1mchat_1_1yml_1_1_yml_manager.html#a3c7eeb24147ed29581fd61ecee236e7f">ca.q0r.mchat.yml.YmlManager.getYml</a></div><div class="ttdeci">static Yml getYml(YmlType type)</div><div class="ttdoc">YML retriever. </div><div class="ttdef"><b>Definition:</b> <a href="_yml_manager_8java_source.html#l00040">YmlManager.java:40</a></div></div>
-<div class="ttc" id="classca_1_1q0r_1_1mchat_1_1yml_1_1locale_1_1_locale_yml_html"><div class="ttname"><a href="classca_1_1q0r_1_1mchat_1_1yml_1_1locale_1_1_locale_yml.html">ca.q0r.mchat.yml.locale.LocaleYml</a></div><div class="ttdef"><b>Definition:</b> <a href="_locale_yml_8java_source.html#l00007">LocaleYml.java:7</a></div></div>
 <div class="ttc" id="classca_1_1q0r_1_1mchat_1_1yml_1_1_yml_manager_html"><div class="ttname"><a href="classca_1_1q0r_1_1mchat_1_1yml_1_1_yml_manager.html">ca.q0r.mchat.yml.YmlManager</a></div><div class="ttdoc">Used to Manage all YML Configs. </div><div class="ttdef"><b>Definition:</b> <a href="_yml_manager_8java_source.html#l00011">YmlManager.java:11</a></div></div>
 <div class="ttc" id="enumca_1_1q0r_1_1mchat_1_1yml_1_1_yml_type_html"><div class="ttname"><a href="enumca_1_1q0r_1_1mchat_1_1yml_1_1_yml_type.html">ca.q0r.mchat.yml.YmlType</a></div><div class="ttdoc">Enum for Different YML Types. </div><div class="ttdef"><b>Definition:</b> <a href="_yml_type_8java_source.html#l00006">YmlType.java:6</a></div></div>
 <div class="ttc" id="classca_1_1q0r_1_1mchat_1_1yml_1_1_yml_manager_html_a3289a0ca70168781c977bb511e4fbc63"><div class="ttname"><a href="classca_1_1q0r_1_1mchat_1_1yml_1_1_yml_manager.html#a3289a0ca70168781c977bb511e4fbc63">ca.q0r.mchat.yml.YmlManager.reloadYml</a></div><div class="ttdeci">static void reloadYml(YmlType type)</div><div class="ttdoc">YML Reloader. </div><div class="ttdef"><b>Definition:</b> <a href="_yml_manager_8java_source.html#l00060">YmlManager.java:60</a></div></div>
