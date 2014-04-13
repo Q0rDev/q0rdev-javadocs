@@ -1,7 +1,8 @@
 var searchData=
 [
   ['parsechatmessage',['parseChatMessage',['../classca_1_1q0r_1_1mchat_1_1api_1_1_parser.html#affa7dd99b0fd10b5cfbd9d3fdbb62e0d',1,'ca::q0r::mchat::api::Parser']]],
-  ['parseevent',['parseEvent',['../classca_1_1q0r_1_1mchat_1_1api_1_1_parser.html#a452ad9fedbab8f510ac2e220472aa096',1,'ca::q0r::mchat::api::Parser']]],
+  ['parseevent',['ParseEvent',['../classca_1_1q0r_1_1mchat_1_1events_1_1custom_1_1_parse_event.html',1,'ca::q0r::mchat::events::custom']]],
+  ['parseevent',['parseEvent',['../classca_1_1q0r_1_1mchat_1_1api_1_1_parser.html#a452ad9fedbab8f510ac2e220472aa096',1,'ca.q0r.mchat.api.Parser.parseEvent()'],['../classca_1_1q0r_1_1mchat_1_1events_1_1custom_1_1_parse_event.html#ad6c95e4df07d0025d6c87e806b6367a0',1,'ca.q0r.mchat.events.custom.ParseEvent.ParseEvent()']]],
   ['parselistcmd',['parseListCmd',['../classca_1_1q0r_1_1mchat_1_1api_1_1_parser.html#acaa94a9a351e2fad34a9a5c3ca28368f',1,'ca::q0r::mchat::api::Parser']]],
   ['parseme',['parseMe',['../classca_1_1q0r_1_1mchat_1_1api_1_1_parser.html#ae512fe2471c908f55758c8ec85f41919',1,'ca::q0r::mchat::api::Parser']]],
   ['parsemessage',['parseMessage',['../classca_1_1q0r_1_1mchat_1_1api_1_1_parser.html#aabb57fd2c2442f825b7ec79d1cf3de6f',1,'ca::q0r::mchat::api::Parser']]],

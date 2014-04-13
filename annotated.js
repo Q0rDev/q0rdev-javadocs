@@ -9,6 +9,13 @@ var annotated =
             [ "Reader", "classca_1_1q0r_1_1mchat_1_1api_1_1_reader.html", null ],
             [ "Writer", "classca_1_1q0r_1_1mchat_1_1api_1_1_writer.html", null ]
           ] ],
+          [ "events", null, [
+            [ "custom", null, [
+              [ "MeEvent", "classca_1_1q0r_1_1mchat_1_1events_1_1custom_1_1_me_event.html", "classca_1_1q0r_1_1mchat_1_1events_1_1custom_1_1_me_event" ],
+              [ "ParseEvent", "classca_1_1q0r_1_1mchat_1_1events_1_1custom_1_1_parse_event.html", "classca_1_1q0r_1_1mchat_1_1events_1_1custom_1_1_parse_event" ],
+              [ "ReplaceEvent", "classca_1_1q0r_1_1mchat_1_1events_1_1custom_1_1_replace_event.html", "classca_1_1q0r_1_1mchat_1_1events_1_1custom_1_1_replace_event" ]
+            ] ]
+          ] ],
           [ "types", null, [
             [ "EventType", "enumca_1_1q0r_1_1mchat_1_1types_1_1_event_type.html", "enumca_1_1q0r_1_1mchat_1_1types_1_1_event_type" ],
             [ "IndicatorType", "enumca_1_1q0r_1_1mchat_1_1types_1_1_indicator_type.html", "enumca_1_1q0r_1_1mchat_1_1types_1_1_indicator_type" ],

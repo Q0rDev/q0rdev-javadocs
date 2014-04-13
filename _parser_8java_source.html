@@ -30,7 +30,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">MChat
-   &#160;<span id="projectnumber">5f10eaec6816c8de6cacf837ce08faf8728ea142</span>
+   &#160;<span id="projectnumber">e74d2b09a3b03518ff6d97eee4bfe8d1a5b0381d</span>
    </div>
    <div id="projectbrief">Chat Formatting Plugin for the Bukkit Minecraft Server Mod.</div>
   </td>
@@ -107,7 +107,7 @@ $(document).ready(function(){initNavTree('_parser_8java_source.html','');});
 <div class="contents">
 <div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="keyword">package </span>ca.q0r.mchat.api;</div>
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;</div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="keyword">import</span> ca.q0r.mchat.events.custom.ParseEvent;</div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="keyword">import</span> <a class="code" href="classca_1_1q0r_1_1mchat_1_1events_1_1custom_1_1_parse_event.html">ca.q0r.mchat.events.custom.ParseEvent</a>;</div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="keyword">import</span> <a class="code" href="enumca_1_1q0r_1_1mchat_1_1types_1_1_event_type.html">ca.q0r.mchat.types.EventType</a>;</div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="keyword">import</span> <a class="code" href="enumca_1_1q0r_1_1mchat_1_1types_1_1_indicator_type.html">ca.q0r.mchat.types.IndicatorType</a>;</div>
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="keyword">import</span> <a class="code" href="enumca_1_1q0r_1_1mchat_1_1yml_1_1locale_1_1_locale_type.html">ca.q0r.mchat.yml.locale.LocaleType</a>;</div>
@@ -117,7 +117,7 @@ $(document).ready(function(){initNavTree('_parser_8java_source.html','');});
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;</div>
 <div class="line"><a name="l00014"></a><span class="lineno"><a class="line" href="classca_1_1q0r_1_1mchat_1_1api_1_1_parser.html">   14</a></span>&#160;<span class="keyword">public</span> <span class="keyword">class </span><a class="code" href="classca_1_1q0r_1_1mchat_1_1api_1_1_parser.html">Parser</a> {</div>
 <div class="line"><a name="l00024"></a><span class="lineno"><a class="line" href="classca_1_1q0r_1_1mchat_1_1api_1_1_parser.html#aabb57fd2c2442f825b7ec79d1cf3de6f">   24</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">static</span> String <a class="code" href="classca_1_1q0r_1_1mchat_1_1api_1_1_parser.html#aabb57fd2c2442f825b7ec79d1cf3de6f">parseMessage</a>(UUID uuid, String world, String msg, String format) {</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;        ParseEvent <span class="keyword">event</span> = <span class="keyword">new</span> ParseEvent(uuid, world, msg, format);</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;        <a class="code" href="classca_1_1q0r_1_1mchat_1_1events_1_1custom_1_1_parse_event.html">ParseEvent</a> <span class="keyword">event</span> = <span class="keyword">new</span> <a class="code" href="classca_1_1q0r_1_1mchat_1_1events_1_1custom_1_1_parse_event.html">ParseEvent</a>(uuid, world, msg, format);</div>
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;</div>
 <div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;        Bukkit.getServer().getPluginManager().callEvent(event);</div>
 <div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;</div>
@@ -165,6 +165,7 @@ $(document).ready(function(){initNavTree('_parser_8java_source.html','');});
 <div class="ttc" id="enumca_1_1q0r_1_1mchat_1_1types_1_1_event_type_html"><div class="ttname"><a href="enumca_1_1q0r_1_1mchat_1_1types_1_1_event_type.html">ca.q0r.mchat.types.EventType</a></div><div class="ttdoc">Enum for Different Event Types. </div><div class="ttdef"><b>Definition:</b> <a href="_event_type_8java_source.html#l00006">EventType.java:6</a></div></div>
 <div class="ttc" id="classca_1_1q0r_1_1mchat_1_1api_1_1_reader_html"><div class="ttname"><a href="classca_1_1q0r_1_1mchat_1_1api_1_1_reader.html">ca.q0r.mchat.api.Reader</a></div><div class="ttdoc">Class used to read from info.yml and various other Plugins. </div><div class="ttdef"><b>Definition:</b> <a href="_reader_8java_source.html#l00029">Reader.java:29</a></div></div>
 <div class="ttc" id="classca_1_1q0r_1_1mchat_1_1api_1_1_parser_html_a452ad9fedbab8f510ac2e220472aa096"><div class="ttname"><a href="classca_1_1q0r_1_1mchat_1_1api_1_1_parser.html#a452ad9fedbab8f510ac2e220472aa096">ca.q0r.mchat.api.Parser.parseEvent</a></div><div class="ttdeci">static String parseEvent(UUID uuid, String world, EventType type)</div><div class="ttdoc">Event Message Formatting. </div><div class="ttdef"><b>Definition:</b> <a href="_parser_8java_source.html#l00063">Parser.java:63</a></div></div>
+<div class="ttc" id="classca_1_1q0r_1_1mchat_1_1events_1_1custom_1_1_parse_event_html"><div class="ttname"><a href="classca_1_1q0r_1_1mchat_1_1events_1_1custom_1_1_parse_event.html">ca.q0r.mchat.events.custom.ParseEvent</a></div><div class="ttdoc">Event that is fired when Parser is used. </div><div class="ttdef"><b>Definition:</b> <a href="_parse_event_8java_source.html#l00023">ParseEvent.java:23</a></div></div>
 <div class="ttc" id="enumca_1_1q0r_1_1mchat_1_1yml_1_1locale_1_1_locale_type_html_ac12e491372d861c39b2afacba51ad3c2"><div class="ttname"><a href="enumca_1_1q0r_1_1mchat_1_1yml_1_1locale_1_1_locale_type.html#ac12e491372d861c39b2afacba51ad3c2">ca.q0r.mchat.yml.locale.LocaleType.FORMAT_NAME</a></div><div class="ttdeci">FORMAT_NAME</div><div class="ttdoc">Name Format. </div><div class="ttdef"><b>Definition:</b> <a href="_locale_type_8java_source.html#l00028">LocaleType.java:28</a></div></div>
 <div class="ttc" id="classca_1_1q0r_1_1mchat_1_1api_1_1_a_p_i_html_aefa8e3bab0a49c88737df3d550160fb1"><div class="ttname"><a href="classca_1_1q0r_1_1mchat_1_1api_1_1_a_p_i.html#aefa8e3bab0a49c88737df3d550160fb1">ca.q0r.mchat.api.API.replace</a></div><div class="ttdeci">static String replace(String source, TreeMap&lt; String, String &gt; changes, IndicatorType type)</div><div class="ttdoc">Variable Replacer. </div><div class="ttdef"><b>Definition:</b> <a href="_a_p_i_8java_source.html#l00284">API.java:284</a></div></div>
 <div class="ttc" id="enumca_1_1q0r_1_1mchat_1_1yml_1_1locale_1_1_locale_type_html"><div class="ttname"><a href="enumca_1_1q0r_1_1mchat_1_1yml_1_1locale_1_1_locale_type.html">ca.q0r.mchat.yml.locale.LocaleType</a></div><div class="ttdoc">Enum for Different Locale Values. </div><div class="ttdef"><b>Definition:</b> <a href="_locale_type_8java_source.html#l00010">LocaleType.java:10</a></div></div>

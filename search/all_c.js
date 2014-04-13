@@ -9,6 +9,8 @@ var searchData=
   ['mchat_5flocale_5fvar_5findicator',['MCHAT_LOCALE_VAR_INDICATOR',['../enumca_1_1q0r_1_1mchat_1_1yml_1_1config_1_1_config_type.html#aa4b178d0d5de1036d4c0434867cfe355',1,'ca::q0r::mchat::yml::config::ConfigType']]],
   ['mchat_5fupdate_5fcheck',['MCHAT_UPDATE_CHECK',['../enumca_1_1q0r_1_1mchat_1_1yml_1_1config_1_1_config_type.html#a81be737545e697b62362e2828d26e4d8',1,'ca::q0r::mchat::yml::config::ConfigType']]],
   ['mchat_5fvar_5findicator',['MCHAT_VAR_INDICATOR',['../enumca_1_1q0r_1_1mchat_1_1yml_1_1config_1_1_config_type.html#abfb727379571e08c725a46c620108a90',1,'ca::q0r::mchat::yml::config::ConfigType']]],
+  ['meevent',['MeEvent',['../classca_1_1q0r_1_1mchat_1_1events_1_1custom_1_1_me_event.html',1,'ca::q0r::mchat::events::custom']]],
+  ['meevent',['MeEvent',['../classca_1_1q0r_1_1mchat_1_1events_1_1custom_1_1_me_event.html#a259b815d2f3be2aa99197ff864d7bb06',1,'ca::q0r::mchat::events::custom::MeEvent']]],
   ['message_5fevent_5fjoin',['MESSAGE_EVENT_JOIN',['../enumca_1_1q0r_1_1mchat_1_1yml_1_1locale_1_1_locale_type.html#a5006a3c13be3e6bae174dbe25372e386',1,'ca::q0r::mchat::yml::locale::LocaleType']]],
   ['message_5fevent_5fkick',['MESSAGE_EVENT_KICK',['../enumca_1_1q0r_1_1mchat_1_1yml_1_1locale_1_1_locale_type.html#ab90fa502de9f2552c02167f73f80c966',1,'ca::q0r::mchat::yml::locale::LocaleType']]],
   ['message_5fevent_5fleave',['MESSAGE_EVENT_LEAVE',['../enumca_1_1q0r_1_1mchat_1_1yml_1_1locale_1_1_locale_type.html#aacb2b54a0090f9294056a5a15a4e7387',1,'ca::q0r::mchat::yml::locale::LocaleType']]],
