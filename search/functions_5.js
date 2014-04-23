@@ -18,7 +18,7 @@ var searchData=
   ['getmessage',['getMessage',['../classca_1_1q0r_1_1mchat_1_1events_1_1custom_1_1_me_event.html#a7a26e551701e06e10897b38c7960da77',1,'ca.q0r.mchat.events.custom.MeEvent.getMessage()'],['../classca_1_1q0r_1_1mchat_1_1events_1_1custom_1_1_parse_event.html#abf36539af842822cdab09c5725b76eff',1,'ca.q0r.mchat.events.custom.ParseEvent.getMessage()']]],
   ['getmname',['getMName',['../classca_1_1q0r_1_1mchat_1_1api_1_1_reader.html#a4e53a6cd992efd1279a9c1e4536a56c2',1,'ca::q0r::mchat::api::Reader']]],
   ['getparsed',['getParsed',['../classca_1_1q0r_1_1mchat_1_1events_1_1custom_1_1_parse_event.html#aa2a5b27e1186b1a7d1ec49614faff3b2',1,'ca::q0r::mchat::events::custom::ParseEvent']]],
-  ['getplayer',['getPlayer',['../classca_1_1q0r_1_1mchat_1_1api_1_1_a_p_i.html#a793f811f6c374c0bc4880227ec062766',1,'ca::q0r::mchat::api::API']]],
+  ['getplayer',['getPlayer',['../classca_1_1q0r_1_1mchat_1_1api_1_1_a_p_i.html#a76a9b1fcdc3df6ba5f8e8457db30c255',1,'ca::q0r::mchat::api::API']]],
   ['getprefix',['getPrefix',['../classca_1_1q0r_1_1mchat_1_1api_1_1_reader.html#aac23b5824bb79f6e4c23d12d150a0267',1,'ca::q0r::mchat::api::Reader']]],
   ['getraw',['getRaw',['../enumca_1_1q0r_1_1mchat_1_1yml_1_1locale_1_1_locale_type.html#a527984d2e0c674e284f82e0eea922798',1,'ca::q0r::mchat::yml::locale::LocaleType']]],
   ['getrawgroup',['getRawGroup',['../classca_1_1q0r_1_1mchat_1_1api_1_1_reader.html#ae08fd5f467b702deb42aa7bb78393f91',1,'ca::q0r::mchat::api::Reader']]],

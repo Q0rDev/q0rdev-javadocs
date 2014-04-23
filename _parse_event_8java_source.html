@@ -30,7 +30,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">MChat
-   &#160;<span id="projectnumber">ba1815fd2d3ba099d0212d619f34fa10eeceb6ce</span>
+   &#160;<span id="projectnumber">fe657e46734e302bddb2ec904c33ce17c127f4c7</span>
    </div>
    <div id="projectbrief">Chat Formatting Plugin for the Bukkit Minecraft Server Mod.</div>
   </td>
@@ -232,49 +232,47 @@ $(document).ready(function(){initNavTree('_parse_event_8java_source.html','');})
 <div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;        StringBuffer sb = <span class="keyword">new</span> StringBuffer();</div>
 <div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;</div>
 <div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;        <span class="keywordflow">while</span> (matcher.find()) {</div>
-<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;            String info = Reader.getRawInfo(uuid, <a class="code" href="enumca_1_1q0r_1_1mchat_1_1types_1_1_info_type.html#ac15dae248681e21ce8698cb0738d470b">InfoType.USER</a>, world, matcher.group(1));</div>
-<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;            String var = info != null ? info : <span class="stringliteral">&quot;&quot;</span>;</div>
-<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;</div>
-<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;            matcher.appendReplacement(sb, Matcher.quoteReplacement(var));</div>
-<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;        }</div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;            String var = Reader.getRawInfo(uuid, <a class="code" href="enumca_1_1q0r_1_1mchat_1_1types_1_1_info_type.html#ac15dae248681e21ce8698cb0738d470b">InfoType.USER</a>, world, matcher.group(1));</div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;            matcher.appendReplacement(sb, Matcher.quoteReplacement(var));</div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;        }</div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;</div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;        matcher.appendTail(sb);</div>
 <div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;</div>
-<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;        matcher.appendTail(sb);</div>
-<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;</div>
-<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;        <span class="keywordflow">return</span> sb.toString();</div>
-<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;    }</div>
-<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;</div>
-<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;    <span class="keyword">private</span> String replaceCensoredWords(String msg) {</div>
-<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;        <span class="keywordflow">if</span> (ConfigType.MCHAT_IP_CENSOR.getBoolean()) {</div>
-<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;            msg = replacer(msg, <span class="stringliteral">&quot;([0-9]{1,3}\\.){3}([0-9]{1,3})&quot;</span>, <span class="stringliteral">&quot;*.*.*.*&quot;</span>);</div>
-<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;        }</div>
-<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;</div>
-<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;        <span class="keywordflow">for</span> (Map.Entry&lt;String, Object&gt; entry : YmlManager.getYml(YmlType.CENSOR_YML).getConfig().getValues(<span class="keyword">true</span>).entrySet()) {</div>
-<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;            <span class="keywordflow">if</span> (!(entry.getValue() instanceof String)) {</div>
-<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;                <span class="keywordflow">continue</span>;</div>
-<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;            }</div>
-<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;</div>
-<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;            msg = replacer(msg, <span class="stringliteral">&quot;(?i)&quot;</span> + entry.getKey(), entry.getValue().toString());</div>
-<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;        }</div>
-<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;</div>
-<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;        <span class="keywordflow">return</span> msg;</div>
-<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;    }</div>
-<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;</div>
-<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;    <span class="keyword">private</span> String replacer(String msg, String regex, String replacement) {</div>
-<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;        Pattern pattern = Pattern.compile(regex);</div>
-<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;        Matcher matcher = pattern.matcher(msg);</div>
-<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;        StringBuffer sb = <span class="keyword">new</span> StringBuffer();</div>
-<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;</div>
-<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;        <span class="keywordflow">while</span> (matcher.find()) {</div>
-<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;            matcher.appendReplacement(sb, Matcher.quoteReplacement(replacement));</div>
-<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;        }</div>
+<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;        <span class="keywordflow">return</span> sb.toString();</div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;    }</div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;</div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;    <span class="keyword">private</span> String replaceCensoredWords(String msg) {</div>
+<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;        <span class="keywordflow">if</span> (ConfigType.MCHAT_IP_CENSOR.getBoolean()) {</div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;            msg = replacer(msg, <span class="stringliteral">&quot;([0-9]{1,3}\\.){3}([0-9]{1,3})&quot;</span>, <span class="stringliteral">&quot;*.*.*.*&quot;</span>);</div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;        }</div>
+<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;</div>
+<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;        <span class="keywordflow">for</span> (Map.Entry&lt;String, Object&gt; entry : YmlManager.getYml(YmlType.CENSOR_YML).getConfig().getValues(<span class="keyword">true</span>).entrySet()) {</div>
+<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;            <span class="keywordflow">if</span> (!(entry.getValue() instanceof String)) {</div>
+<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;                <span class="keywordflow">continue</span>;</div>
+<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;            }</div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;</div>
+<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;            msg = replacer(msg, <span class="stringliteral">&quot;(?i)&quot;</span> + entry.getKey(), entry.getValue().toString());</div>
+<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;        }</div>
+<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;</div>
+<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;        <span class="keywordflow">return</span> msg;</div>
+<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;    }</div>
+<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;</div>
+<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;    <span class="keyword">private</span> String replacer(String msg, String regex, String replacement) {</div>
+<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;        Pattern pattern = Pattern.compile(regex);</div>
+<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;        Matcher matcher = pattern.matcher(msg);</div>
+<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;        StringBuffer sb = <span class="keyword">new</span> StringBuffer();</div>
+<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;</div>
+<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;        <span class="keywordflow">while</span> (matcher.find()) {</div>
+<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;            matcher.appendReplacement(sb, Matcher.quoteReplacement(replacement));</div>
+<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;        }</div>
+<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;</div>
+<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;        matcher.appendTail(sb);</div>
 <div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;</div>
-<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;        matcher.appendTail(sb);</div>
+<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;        msg = sb.toString();</div>
 <div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;</div>
-<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;        msg = sb.toString();</div>
-<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;</div>
-<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;        <span class="keywordflow">return</span> msg;</div>
-<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;    }</div>
-<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;}</div>
+<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;        <span class="keywordflow">return</span> msg;</div>
+<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;    }</div>
+<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;}</div>
 <div class="ttc" id="classca_1_1q0r_1_1mchat_1_1events_1_1custom_1_1_parse_event_html_af3ada5a90529d0a6f2bab3c4e8e1075c"><div class="ttname"><a href="classca_1_1q0r_1_1mchat_1_1events_1_1custom_1_1_parse_event.html#af3ada5a90529d0a6f2bab3c4e8e1075c">ca.q0r.mchat.events.custom.ParseEvent.getHandlers</a></div><div class="ttdeci">HandlerList getHandlers()</div><div class="ttdoc">Forced Override of HandlerList. </div><div class="ttdef"><b>Definition:</b> <a href="_parse_event_8java_source.html#l00030">ParseEvent.java:30</a></div></div>
 <div class="ttc" id="enumca_1_1q0r_1_1mchat_1_1types_1_1_info_type_html_ac15dae248681e21ce8698cb0738d470b"><div class="ttname"><a href="enumca_1_1q0r_1_1mchat_1_1types_1_1_info_type.html#ac15dae248681e21ce8698cb0738d470b">ca.q0r.mchat.types.InfoType.USER</a></div><div class="ttdeci">USER</div><div class="ttdoc">User Info Type. </div><div class="ttdef"><b>Definition:</b> <a href="_info_type_8java_source.html#l00014">InfoType.java:14</a></div></div>
 <div class="ttc" id="classca_1_1q0r_1_1mchat_1_1events_1_1custom_1_1_parse_event_html_a23d4e1bff1600f12d53886fae45fdc70"><div class="ttname"><a href="classca_1_1q0r_1_1mchat_1_1events_1_1custom_1_1_parse_event.html#a23d4e1bff1600f12d53886fae45fdc70">ca.q0r.mchat.events.custom.ParseEvent.getHandlerList</a></div><div class="ttdeci">static HandlerList getHandlerList()</div><div class="ttdoc">Forced Override of HandlerList. </div><div class="ttdef"><b>Definition:</b> <a href="_parse_event_8java_source.html#l00038">ParseEvent.java:38</a></div></div>
