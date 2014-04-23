@@ -23,6 +23,7 @@ var hierarchy =
     [ "ca.q0r.mchat.yml.YmlManager", "classca_1_1q0r_1_1mchat_1_1yml_1_1_yml_manager.html", null ],
     [ "ca.q0r.mchat.yml.YmlType", "enumca_1_1q0r_1_1mchat_1_1yml_1_1_yml_type.html", null ],
     [ "Cancellable", null, [
+      [ "ca.q0r.mchat.events.custom.MeEvent", "classca_1_1q0r_1_1mchat_1_1events_1_1custom_1_1_me_event.html", null ],
       [ "ca.q0r.mchat.events.custom.ReplaceEvent", "classca_1_1q0r_1_1mchat_1_1events_1_1custom_1_1_replace_event.html", null ]
     ] ],
     [ "Event", null, [
