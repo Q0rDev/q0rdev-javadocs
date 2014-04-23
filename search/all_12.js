@@ -7,7 +7,7 @@ var searchData=
   ['sendrawmessage',['sendRawMessage',['../classca_1_1q0r_1_1mchat_1_1util_1_1_message_util.html#a31b3dc3ee9bcb4a7cd1fb64c1833b0e3',1,'ca::q0r::mchat::util::MessageUtil']]],
   ['set',['set',['../classca_1_1q0r_1_1mchat_1_1yml_1_1_yml.html#a333cc8ffbb3af414dcd479b907dd532c',1,'ca::q0r::mchat::yml::Yml']]],
   ['set_5fgroup',['SET_GROUP',['../enumca_1_1q0r_1_1mchat_1_1types_1_1_info_edit_type.html#ac540367eeb302b86145e1beeb1ac4673',1,'ca::q0r::mchat::types::InfoEditType']]],
-  ['setcancelled',['setCancelled',['../classca_1_1q0r_1_1mchat_1_1events_1_1custom_1_1_replace_event.html#af2eac2e94b5832c94e0ff5f3caf98e53',1,'ca::q0r::mchat::events::custom::ReplaceEvent']]],
+  ['setcancelled',['setCancelled',['../classca_1_1q0r_1_1mchat_1_1events_1_1custom_1_1_me_event.html#af79f57837811fe6037b32e8267cd798b',1,'ca.q0r.mchat.events.custom.MeEvent.setCancelled()'],['../classca_1_1q0r_1_1mchat_1_1events_1_1custom_1_1_replace_event.html#af2eac2e94b5832c94e0ff5f3caf98e53',1,'ca.q0r.mchat.events.custom.ReplaceEvent.setCancelled()']]],
   ['setformat',['setFormat',['../classca_1_1q0r_1_1mchat_1_1events_1_1custom_1_1_parse_event.html#a1f0f35025a8fc882fa29976aadc81de2',1,'ca.q0r.mchat.events.custom.ParseEvent.setFormat()'],['../classca_1_1q0r_1_1mchat_1_1events_1_1custom_1_1_replace_event.html#a42db1c65d4d3fa33d38d4e35adee7905',1,'ca.q0r.mchat.events.custom.ReplaceEvent.setFormat()']]],
   ['setgroup',['setGroup',['../classca_1_1q0r_1_1mchat_1_1api_1_1_writer.html#a210f744810c347453d9febd0eb19054e',1,'ca::q0r::mchat::api::Writer']]],
   ['setinfovar',['setInfoVar',['../classca_1_1q0r_1_1mchat_1_1api_1_1_writer.html#a869539e76a7cf1d9fe69418f815c5344',1,'ca::q0r::mchat::api::Writer']]],
