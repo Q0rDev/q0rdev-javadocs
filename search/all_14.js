@@ -1,5 +1,7 @@
 var searchData=
 [
-  ['unload',['unload',['../classca_1_1q0r_1_1mchat_1_1yml_1_1_yml_manager.html#ae2f0414c84cd5f76803b20142b5ddee7',1,'ca::q0r::mchat::yml::YmlManager']]],
-  ['user',['USER',['../enumca_1_1q0r_1_1mchat_1_1types_1_1_info_type.html#ac15dae248681e21ce8698cb0738d470b',1,'ca::q0r::mchat::types::InfoType']]]
+  ['var',['Var',['../classca_1_1q0r_1_1mchat_1_1variables_1_1_var.html',1,'ca::q0r::mchat::variables']]],
+  ['variablemanager',['VariableManager',['../classca_1_1q0r_1_1mchat_1_1variables_1_1_variable_manager.html',1,'ca::q0r::mchat::variables']]],
+  ['vault',['VAULT',['../enumca_1_1q0r_1_1mchat_1_1types_1_1_plugin_type.html#af4ead02898fb91d17f3e45c1e02aab79',1,'ca::q0r::mchat::types::PluginType']]],
+  ['vault_5fchat',['VAULT_CHAT',['../enumca_1_1q0r_1_1mchat_1_1types_1_1_plugin_type.html#ad1e92828e8e5207a7e56b496d55a299c',1,'ca::q0r::mchat::types::PluginType']]]
 ];
