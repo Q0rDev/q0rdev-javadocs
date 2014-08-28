@@ -30,7 +30,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">MChat
-   &#160;<span id="projectnumber">ae839a40197e9de8636f656f9dd3f336d80e5043</span>
+   &#160;<span id="projectnumber">75376e54330ee308652d49826881951895ab1ac5</span>
    </div>
    <div id="projectbrief">Chat Formatting Plugin for the Bukkit Minecraft Server Mod.</div>
   </td>
@@ -125,7 +125,7 @@ $(document).ready(function(){initNavTree('_a_p_i_8java_source.html','');});
 <div class="line"><a name="l00021"></a><span class="lineno"><a class="line" href="classca_1_1q0r_1_1mchat_1_1api_1_1_a_p_i.html">   21</a></span>&#160;<span class="keyword">public</span> <span class="keyword">class </span><a class="code" href="classca_1_1q0r_1_1mchat_1_1api_1_1_a_p_i.html">API</a> {</div>
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <span class="comment">// Vault</span></div>
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <span class="keyword">static</span> Permission vPerm;</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <span class="keyword">static</span> Boolean vaultB;</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <span class="keyword">static</span> Boolean vPermB;</div>
 <div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;</div>
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <span class="keyword">static</span> Chat vChat = null;</div>
 <div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <span class="keyword">static</span> Boolean vChatB = <span class="keyword">false</span>;</div>
@@ -244,14 +244,14 @@ $(document).ready(function(){initNavTree('_a_p_i_8java_source.html','');});
 <div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;    }</div>
 <div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;</div>
 <div class="line"><a name="l00206"></a><span class="lineno"><a class="line" href="classca_1_1q0r_1_1mchat_1_1api_1_1_a_p_i.html#a031d860c9885626f7b922dffdf3b3063">  206</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">static</span> Boolean <a class="code" href="classca_1_1q0r_1_1mchat_1_1api_1_1_a_p_i.html#a031d860c9885626f7b922dffdf3b3063">checkPermissions</a>(Player player, String node) {</div>
-<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;        <span class="keywordflow">return</span> vaultB &amp;&amp; vPerm.has(player, node)</div>
+<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;        <span class="keywordflow">return</span> vPermB &amp;&amp; vPerm.has(player, node)</div>
 <div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;                || player.hasPermission(node) || player.isOp();</div>
 <div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;    }</div>
 <div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;</div>
 <div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;    @Deprecated</div>
 <div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;    @SuppressWarnings(<span class="stringliteral">&quot;deprecation&quot;</span>)</div>
 <div class="line"><a name="l00221"></a><span class="lineno"><a class="line" href="classca_1_1q0r_1_1mchat_1_1api_1_1_a_p_i.html#acf9302ce6d8644f17a518651b4129e7a">  221</a></span>&#160;    public static Boolean <a class="code" href="classca_1_1q0r_1_1mchat_1_1api_1_1_a_p_i.html#a031d860c9885626f7b922dffdf3b3063">checkPermissions</a>(String pName, String world, String node) {</div>
-<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;        <span class="keywordflow">return</span> vaultB &amp;&amp; vPerm.has(world, pName, node)</div>
+<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;        <span class="keywordflow">return</span> vPermB &amp;&amp; vPerm.has(world, pName, node)</div>
 <div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;                || Bukkit.getServer().getPlayer(pName) != null &amp;&amp; Bukkit.getServer().getPlayer(pName).hasPermission(node);</div>
 <div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;    }</div>
 <div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;</div>
@@ -260,7 +260,7 @@ $(document).ready(function(){initNavTree('_a_p_i_8java_source.html','');});
 <div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;    }</div>
 <div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;</div>
 <div class="line"><a name="l00244"></a><span class="lineno"><a class="line" href="classca_1_1q0r_1_1mchat_1_1api_1_1_a_p_i.html#ad488e85d8ece44018a857400f4ffd5c3">  244</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">static</span> Boolean <a class="code" href="classca_1_1q0r_1_1mchat_1_1api_1_1_a_p_i.html#ad488e85d8ece44018a857400f4ffd5c3">checkPermissions</a>(CommandSender sender, String node) {</div>
-<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;        <span class="keywordflow">return</span> vaultB &amp;&amp; vPerm.has(sender, node)</div>
+<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;        <span class="keywordflow">return</span> vPermB &amp;&amp; vPerm.has(sender, node)</div>
 <div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;                || sender.hasPermission(node);</div>
 <div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;    }</div>
 <div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;</div>
@@ -284,8 +284,8 @@ $(document).ready(function(){initNavTree('_a_p_i_8java_source.html','');});
 <div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;        }</div>
 <div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;</div>
 <div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;        <span class="keywordflow">switch</span> (type) {</div>
-<div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;            <span class="keywordflow">case</span> VAULT:</div>
-<div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;                <span class="keywordflow">return</span> vaultB;</div>
+<div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;            <span class="keywordflow">case</span> VAULT_PERM:</div>
+<div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;                <span class="keywordflow">return</span> vPermB;</div>
 <div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160;            <span class="keywordflow">case</span> VAULT_CHAT:</div>
 <div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160;                <span class="keywordflow">return</span> vChatB;</div>
 <div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;            <span class="keywordflow">case</span> LEVELED_NODES:</div>
@@ -321,30 +321,29 @@ $(document).ready(function(){initNavTree('_a_p_i_8java_source.html','');});
 <div class="line"><a name="l00337"></a><span class="lineno">  337</span>&#160;        Plugin pluginTest;</div>
 <div class="line"><a name="l00338"></a><span class="lineno">  338</span>&#160;</div>
 <div class="line"><a name="l00339"></a><span class="lineno">  339</span>&#160;        pluginTest = pm.getPlugin(<span class="stringliteral">&quot;Vault&quot;</span>);</div>
-<div class="line"><a name="l00340"></a><span class="lineno">  340</span>&#160;        vaultB = pluginTest != null;</div>
-<div class="line"><a name="l00341"></a><span class="lineno">  341</span>&#160;        <span class="keywordflow">if</span> (vaultB) {</div>
-<div class="line"><a name="l00342"></a><span class="lineno">  342</span>&#160;            RegisteredServiceProvider&lt;Permission&gt; permissionProvider = Bukkit.getServer().getServicesManager().getRegistration(Permission.class);</div>
-<div class="line"><a name="l00343"></a><span class="lineno">  343</span>&#160;            RegisteredServiceProvider&lt;Chat&gt; chatProvider = Bukkit.getServer().getServicesManager().getRegistration(Chat.class);</div>
-<div class="line"><a name="l00344"></a><span class="lineno">  344</span>&#160;</div>
-<div class="line"><a name="l00345"></a><span class="lineno">  345</span>&#160;            <span class="keywordflow">if</span> (chatProvider != null) {</div>
-<div class="line"><a name="l00346"></a><span class="lineno">  346</span>&#160;                MessageUtil.logFormatted(<span class="stringliteral">&quot;&lt;Chat&gt; &quot;</span> + pluginTest.getDescription().getName() + <span class="stringliteral">&quot; v&quot;</span> + pluginTest.getDescription().getVersion() + <span class="stringliteral">&quot; hooked!.&quot;</span>);</div>
-<div class="line"><a name="l00347"></a><span class="lineno">  347</span>&#160;                vChat = chatProvider.getProvider();</div>
-<div class="line"><a name="l00348"></a><span class="lineno">  348</span>&#160;            }</div>
-<div class="line"><a name="l00349"></a><span class="lineno">  349</span>&#160;</div>
-<div class="line"><a name="l00350"></a><span class="lineno">  350</span>&#160;            <span class="keywordflow">if</span> (permissionProvider != null) {</div>
-<div class="line"><a name="l00351"></a><span class="lineno">  351</span>&#160;                MessageUtil.logFormatted(<span class="stringliteral">&quot;&lt;Permissions&gt; &quot;</span> + pluginTest.getDescription().getName() + <span class="stringliteral">&quot; v&quot;</span> + pluginTest.getDescription().getVersion() + <span class="stringliteral">&quot; hooked!.&quot;</span>);</div>
-<div class="line"><a name="l00352"></a><span class="lineno">  352</span>&#160;                vPerm = permissionProvider.getProvider();</div>
-<div class="line"><a name="l00353"></a><span class="lineno">  353</span>&#160;            }</div>
-<div class="line"><a name="l00354"></a><span class="lineno">  354</span>&#160;</div>
-<div class="line"><a name="l00355"></a><span class="lineno">  355</span>&#160;            vaultB = vPerm != null;</div>
-<div class="line"><a name="l00356"></a><span class="lineno">  356</span>&#160;            vChatB = vChat != null;</div>
-<div class="line"><a name="l00357"></a><span class="lineno">  357</span>&#160;        }</div>
-<div class="line"><a name="l00358"></a><span class="lineno">  358</span>&#160;</div>
-<div class="line"><a name="l00359"></a><span class="lineno">  359</span>&#160;        <span class="keywordflow">if</span> (!(vaultB)) {</div>
-<div class="line"><a name="l00360"></a><span class="lineno">  360</span>&#160;            MessageUtil.logFormatted(<span class="stringliteral">&quot;&lt;Permissions&gt; SuperPerms hooked!.&quot;</span>);</div>
-<div class="line"><a name="l00361"></a><span class="lineno">  361</span>&#160;        }</div>
-<div class="line"><a name="l00362"></a><span class="lineno">  362</span>&#160;    }</div>
-<div class="line"><a name="l00363"></a><span class="lineno">  363</span>&#160;}</div>
+<div class="line"><a name="l00340"></a><span class="lineno">  340</span>&#160;        <span class="keywordflow">if</span> (pluginTest != null) {</div>
+<div class="line"><a name="l00341"></a><span class="lineno">  341</span>&#160;            RegisteredServiceProvider&lt;Permission&gt; permissionProvider = Bukkit.getServer().getServicesManager().getRegistration(Permission.class);</div>
+<div class="line"><a name="l00342"></a><span class="lineno">  342</span>&#160;            RegisteredServiceProvider&lt;Chat&gt; chatProvider = Bukkit.getServer().getServicesManager().getRegistration(Chat.class);</div>
+<div class="line"><a name="l00343"></a><span class="lineno">  343</span>&#160;</div>
+<div class="line"><a name="l00344"></a><span class="lineno">  344</span>&#160;            <span class="keywordflow">if</span> (chatProvider != null) {</div>
+<div class="line"><a name="l00345"></a><span class="lineno">  345</span>&#160;                MessageUtil.logFormatted(<span class="stringliteral">&quot;&lt;Chat&gt; &quot;</span> + pluginTest.getDescription().getName() + <span class="stringliteral">&quot; v&quot;</span> + pluginTest.getDescription().getVersion() + <span class="stringliteral">&quot; hooked!.&quot;</span>);</div>
+<div class="line"><a name="l00346"></a><span class="lineno">  346</span>&#160;                vChat = chatProvider.getProvider();</div>
+<div class="line"><a name="l00347"></a><span class="lineno">  347</span>&#160;            }</div>
+<div class="line"><a name="l00348"></a><span class="lineno">  348</span>&#160;</div>
+<div class="line"><a name="l00349"></a><span class="lineno">  349</span>&#160;            <span class="keywordflow">if</span> (permissionProvider != null) {</div>
+<div class="line"><a name="l00350"></a><span class="lineno">  350</span>&#160;                MessageUtil.logFormatted(<span class="stringliteral">&quot;&lt;Permissions&gt; &quot;</span> + pluginTest.getDescription().getName() + <span class="stringliteral">&quot; v&quot;</span> + pluginTest.getDescription().getVersion() + <span class="stringliteral">&quot; hooked!.&quot;</span>);</div>
+<div class="line"><a name="l00351"></a><span class="lineno">  351</span>&#160;                vPerm = permissionProvider.getProvider();</div>
+<div class="line"><a name="l00352"></a><span class="lineno">  352</span>&#160;            }</div>
+<div class="line"><a name="l00353"></a><span class="lineno">  353</span>&#160;</div>
+<div class="line"><a name="l00354"></a><span class="lineno">  354</span>&#160;            vPermB = vPerm != null;</div>
+<div class="line"><a name="l00355"></a><span class="lineno">  355</span>&#160;            vChatB = vChat != null;</div>
+<div class="line"><a name="l00356"></a><span class="lineno">  356</span>&#160;        }</div>
+<div class="line"><a name="l00357"></a><span class="lineno">  357</span>&#160;</div>
+<div class="line"><a name="l00358"></a><span class="lineno">  358</span>&#160;        <span class="keywordflow">if</span> (pluginTest == null) {</div>
+<div class="line"><a name="l00359"></a><span class="lineno">  359</span>&#160;            MessageUtil.logFormatted(<span class="stringliteral">&quot;&lt;Permissions&gt; SuperPerms hooked!.&quot;</span>);</div>
+<div class="line"><a name="l00360"></a><span class="lineno">  360</span>&#160;        }</div>
+<div class="line"><a name="l00361"></a><span class="lineno">  361</span>&#160;    }</div>
+<div class="line"><a name="l00362"></a><span class="lineno">  362</span>&#160;}</div>
 <div class="ttc" id="classca_1_1q0r_1_1mchat_1_1api_1_1_a_p_i_html_a793f811f6c374c0bc4880227ec062766"><div class="ttname"><a href="classca_1_1q0r_1_1mchat_1_1api_1_1_a_p_i.html#a793f811f6c374c0bc4880227ec062766">ca.q0r.mchat.api.API.getPlayer</a></div><div class="ttdeci">static Player getPlayer(String find)</div><div class="ttdoc">Gets Player based on partial UUID/Name. </div><div class="ttdef"><b>Definition:</b> <a href="_a_p_i_8java_source.html#l00322">API.java:322</a></div></div>
 <div class="ttc" id="classca_1_1q0r_1_1mchat_1_1api_1_1_a_p_i_html_ad1f2e3828c1bf42e173c1d8f86499c35"><div class="ttname"><a href="classca_1_1q0r_1_1mchat_1_1api_1_1_a_p_i.html#ad1f2e3828c1bf42e173c1d8f86499c35">ca.q0r.mchat.api.API.checkPermissions</a></div><div class="ttdeci">static Boolean checkPermissions(UUID uuid, String node)</div><div class="ttdoc">Permission Checking. </div><div class="ttdef"><b>Definition:</b> <a href="_a_p_i_8java_source.html#l00233">API.java:233</a></div></div>
 <div class="ttc" id="classca_1_1q0r_1_1mchat_1_1api_1_1_a_p_i_html_afa5685d7882372e36f5cfae7938fb6bd"><div class="ttname"><a href="classca_1_1q0r_1_1mchat_1_1api_1_1_a_p_i.html#afa5685d7882372e36f5cfae7938fb6bd">ca.q0r.mchat.api.API.isPluginEnabled</a></div><div class="ttdeci">static Boolean isPluginEnabled(PluginType type)</div><div class="ttdoc">Used to check if Plugin is enabled. </div><div class="ttdef"><b>Definition:</b> <a href="_a_p_i_8java_source.html#l00286">API.java:286</a></div></div>
