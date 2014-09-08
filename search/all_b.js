@@ -1,6 +1,7 @@
 var searchData=
 [
   ['mchat_5falter_5fevents',['MCHAT_ALTER_EVENTS',['../enumca_1_1q0r_1_1mchat_1_1yml_1_1config_1_1_config_type.html#ac0239a47120aee8c1bd5d22b4ed4f62d',1,'ca::q0r::mchat::yml::config::ConfigType']]],
+  ['mchat_5falter_5flist',['MCHAT_ALTER_LIST',['../enumca_1_1q0r_1_1mchat_1_1yml_1_1config_1_1_config_type.html#a82933a75b4a396b06e5a5552a21c0306',1,'ca::q0r::mchat::yml::config::ConfigType']]],
   ['mchat_5fapi_5fonly',['MCHAT_API_ONLY',['../enumca_1_1q0r_1_1mchat_1_1yml_1_1config_1_1_config_type.html#a2913f94c4281463d0e78cef59474bb4e',1,'ca::q0r::mchat::yml::config::ConfigType']]],
   ['mchat_5fcaps_5flock_5frange',['MCHAT_CAPS_LOCK_RANGE',['../enumca_1_1q0r_1_1mchat_1_1yml_1_1config_1_1_config_type.html#a883267580e218135fb8e76d82316477f',1,'ca::q0r::mchat::yml::config::ConfigType']]],
   ['mchat_5fchat_5fdistance',['MCHAT_CHAT_DISTANCE',['../enumca_1_1q0r_1_1mchat_1_1yml_1_1config_1_1_config_type.html#a84dfb85310de95d6aa1776f2171f7be0',1,'ca::q0r::mchat::yml::config::ConfigType']]],

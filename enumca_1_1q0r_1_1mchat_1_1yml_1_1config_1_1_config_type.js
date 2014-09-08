@@ -11,6 +11,7 @@ var enumca_1_1q0r_1_1mchat_1_1yml_1_1config_1_1_config_type =
     [ "INFO_USE_NEW_INFO", "enumca_1_1q0r_1_1mchat_1_1yml_1_1config_1_1_config_type.html#a8b8420f4c77923399baa1e3014cec922", null ],
     [ "INFO_USE_OLD_NODES", "enumca_1_1q0r_1_1mchat_1_1yml_1_1config_1_1_config_type.html#abb59344379740552c5d9bb88068906ac", null ],
     [ "MCHAT_ALTER_EVENTS", "enumca_1_1q0r_1_1mchat_1_1yml_1_1config_1_1_config_type.html#ac0239a47120aee8c1bd5d22b4ed4f62d", null ],
+    [ "MCHAT_ALTER_LIST", "enumca_1_1q0r_1_1mchat_1_1yml_1_1config_1_1_config_type.html#a82933a75b4a396b06e5a5552a21c0306", null ],
     [ "MCHAT_API_ONLY", "enumca_1_1q0r_1_1mchat_1_1yml_1_1config_1_1_config_type.html#a2913f94c4281463d0e78cef59474bb4e", null ],
     [ "MCHAT_CAPS_LOCK_RANGE", "enumca_1_1q0r_1_1mchat_1_1yml_1_1config_1_1_config_type.html#a883267580e218135fb8e76d82316477f", null ],
     [ "MCHAT_CHAT_DISTANCE", "enumca_1_1q0r_1_1mchat_1_1yml_1_1config_1_1_config_type.html#a84dfb85310de95d6aa1776f2171f7be0", null ],
