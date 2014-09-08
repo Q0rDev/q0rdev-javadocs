@@ -30,7 +30,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">MChat
-   &#160;<span id="projectnumber">3fd1e525c4ad9428ceb1b35ba9f1970b81f6ba96</span>
+   &#160;<span id="projectnumber">e14457cca3f1caf98a9f4900100f8e5138f6ab91</span>
    </div>
    <div id="projectbrief">Chat Formatting Plugin for the Bukkit Minecraft Server Mod.</div>
   </td>
@@ -219,7 +219,7 @@ $(document).ready(function(){initNavTree('_reader_8java_source.html','');});
 <div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;</div>
 <div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;    <span class="keyword">private</span> <span class="keyword">static</span> String getLeveledInfo(UUID uuid, String info) {</div>
 <div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;        YamlConfiguration infoConfig = YmlManager.getYml(<a class="code" href="enumca_1_1q0r_1_1mchat_1_1yml_1_1_yml_type.html#a46f70bd15aa817f014965b4891851055">YmlType.INFO_YML</a>).getConfig();</div>
-<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;        HashMap&lt;Integer, String&gt; iMap = <span class="keyword">new</span> HashMap&lt;&gt;();</div>
+<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;        HashMap&lt;Integer, String&gt; iMap = <span class="keyword">new</span> HashMap&lt;Integer, String&gt;();</div>
 <div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;</div>
 <div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;        <span class="keywordflow">if</span> (!infoConfig.isSet(<span class="stringliteral">&quot;mchat.&quot;</span> + info)) {</div>
 <div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;            <span class="keywordflow">return</span> <span class="stringliteral">&quot;&quot;</span>;</div>
@@ -298,105 +298,96 @@ $(document).ready(function(){initNavTree('_reader_8java_source.html','');});
 <div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;        String infoString = <span class="stringliteral">&quot;&quot;</span>;</div>
 <div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;</div>
 <div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;        <span class="keywordflow">if</span> (!API.vChat.getName().equals(<span class="stringliteral">&quot;MChat&quot;</span>)) {</div>
-<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;            <span class="keywordflow">switch</span> (info) {</div>
-<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;                <span class="keywordflow">case</span> <span class="stringliteral">&quot;group&quot;</span>:</div>
-<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;                    infoString = API.vChat.getPrimaryGroup(world, player);</div>
-<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;                    <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;                <span class="keywordflow">case</span> <span class="stringliteral">&quot;prefix&quot;</span>:</div>
-<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;                    infoString = API.vChat.getPlayerPrefix(world, player);</div>
-<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;                    <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;                <span class="keywordflow">case</span> <span class="stringliteral">&quot;suffix&quot;</span>:</div>
-<div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;                    infoString = API.vChat.getPlayerSuffix(world, player);</div>
-<div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;                    <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;                <span class="keywordflow">default</span>:</div>
-<div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;                    infoString = API.vChat.getPlayerInfoString(world, player, info, <span class="stringliteral">&quot;&quot;</span>);</div>
-<div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;                    <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;            }</div>
-<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;        }</div>
-<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;</div>
-<div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;        <span class="keywordflow">return</span> infoString;</div>
-<div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;    }</div>
-<div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;</div>
-<div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;    <span class="keyword">private</span> <span class="keyword">static</span> String getVaultChatGroupInfo(UUID uuid, String world, String info) {</div>
-<div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;        String name = Bukkit.getServer().getPlayer(uuid).getName();</div>
-<div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;        String infoString = <span class="stringliteral">&quot;&quot;</span>;</div>
-<div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;</div>
-<div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;        <span class="keywordflow">if</span> (!API.vChat.getName().equals(<span class="stringliteral">&quot;MChat&quot;</span>)) {</div>
-<div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;            <span class="keywordflow">switch</span> (info) {</div>
-<div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;                <span class="keywordflow">case</span> <span class="stringliteral">&quot;prefix&quot;</span>:</div>
-<div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;                    infoString = API.vChat.getGroupPrefix(world, name);</div>
-<div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;                    <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;                <span class="keywordflow">case</span> <span class="stringliteral">&quot;suffix&quot;</span>:</div>
-<div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;                    infoString = API.vChat.getGroupSuffix(world, name);</div>
-<div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;                    <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;                <span class="keywordflow">default</span>:</div>
-<div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160;                    infoString = API.vChat.getGroupInfoString(world, name, info, <span class="stringliteral">&quot;&quot;</span>);</div>
-<div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160;                    <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;            }</div>
-<div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;        }</div>
-<div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;</div>
-<div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;        <span class="keywordflow">return</span> infoString;</div>
-<div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;    }</div>
+<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;            <span class="keywordflow">if</span> (info.equals(<span class="stringliteral">&quot;group&quot;</span>)) {</div>
+<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;                infoString = API.vChat.getPrimaryGroup(world, player);</div>
+<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;            } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (info.equals(<span class="stringliteral">&quot;prefix&quot;</span>)) {</div>
+<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;                infoString = API.vChat.getPlayerPrefix(world, player);</div>
+<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;            } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (info.equals(<span class="stringliteral">&quot;suffix&quot;</span>)) {</div>
+<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;                infoString = API.vChat.getPlayerSuffix(world, player);</div>
+<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;            } <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;                infoString = API.vChat.getPlayerInfoString(world, player, info, <span class="stringliteral">&quot;&quot;</span>);</div>
+<div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;            }</div>
+<div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;        }</div>
+<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;</div>
+<div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;        <span class="keywordflow">return</span> infoString;</div>
+<div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;    }</div>
+<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;</div>
+<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;    <span class="keyword">private</span> <span class="keyword">static</span> String getVaultChatGroupInfo(UUID uuid, String world, String info) {</div>
+<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;        String name = Bukkit.getServer().getPlayer(uuid).getName();</div>
+<div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;        String infoString = <span class="stringliteral">&quot;&quot;</span>;</div>
+<div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;</div>
+<div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;        <span class="keywordflow">if</span> (!API.vChat.getName().equals(<span class="stringliteral">&quot;MChat&quot;</span>)) {</div>
+<div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;            <span class="keywordflow">if</span> (info.equals(<span class="stringliteral">&quot;prefix&quot;</span>)) {</div>
+<div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;                infoString = API.vChat.getGroupPrefix(world, name);</div>
+<div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;            } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (info.equals(<span class="stringliteral">&quot;suffix&quot;</span>)) {</div>
+<div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;                infoString = API.vChat.getGroupSuffix(world, name);</div>
+<div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;            } <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;                infoString = API.vChat.getGroupInfoString(world, name, info, <span class="stringliteral">&quot;&quot;</span>);</div>
+<div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;            }</div>
+<div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;        }</div>
+<div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;</div>
+<div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;        <span class="keywordflow">return</span> infoString;</div>
+<div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;    }</div>
+<div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;</div>
+<div class="line"><a name="l00299"></a><span class="lineno"><a class="line" href="classca_1_1q0r_1_1mchat_1_1api_1_1_reader.html#a647b08302eed4af53bdef87c9eb4e62b">  299</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">static</span> String <a class="code" href="classca_1_1q0r_1_1mchat_1_1api_1_1_reader.html#a647b08302eed4af53bdef87c9eb4e62b">getGroupName</a>(String group) {</div>
+<div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;        YamlConfiguration infoConfig = YmlManager.getYml(<a class="code" href="enumca_1_1q0r_1_1mchat_1_1yml_1_1_yml_type.html#a46f70bd15aa817f014965b4891851055">YmlType.INFO_YML</a>).getConfig();</div>
 <div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;</div>
-<div class="line"><a name="l00308"></a><span class="lineno"><a class="line" href="classca_1_1q0r_1_1mchat_1_1api_1_1_reader.html#a647b08302eed4af53bdef87c9eb4e62b">  308</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">static</span> String <a class="code" href="classca_1_1q0r_1_1mchat_1_1api_1_1_reader.html#a647b08302eed4af53bdef87c9eb4e62b">getGroupName</a>(String group) {</div>
-<div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160;        YamlConfiguration infoConfig = YmlManager.getYml(<a class="code" href="enumca_1_1q0r_1_1mchat_1_1yml_1_1_yml_type.html#a46f70bd15aa817f014965b4891851055">YmlType.INFO_YML</a>).getConfig();</div>
-<div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160;</div>
-<div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160;        <span class="keywordflow">if</span> (group.isEmpty()) {</div>
-<div class="line"><a name="l00312"></a><span class="lineno">  312</span>&#160;            <span class="keywordflow">return</span> <span class="stringliteral">&quot;&quot;</span>;</div>
-<div class="line"><a name="l00313"></a><span class="lineno">  313</span>&#160;        }</div>
-<div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160;</div>
-<div class="line"><a name="l00315"></a><span class="lineno">  315</span>&#160;        <span class="keywordflow">if</span> (infoConfig.isSet(<span class="stringliteral">&quot;groupnames.&quot;</span> + group)) {</div>
-<div class="line"><a name="l00316"></a><span class="lineno">  316</span>&#160;            <span class="keywordflow">return</span> infoConfig.getString(<span class="stringliteral">&quot;groupnames.&quot;</span> + group);</div>
-<div class="line"><a name="l00317"></a><span class="lineno">  317</span>&#160;        }</div>
-<div class="line"><a name="l00318"></a><span class="lineno">  318</span>&#160;</div>
-<div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160;        <span class="keywordflow">return</span> group;</div>
-<div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160;    }</div>
+<div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160;        <span class="keywordflow">if</span> (group.isEmpty()) {</div>
+<div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160;            <span class="keywordflow">return</span> <span class="stringliteral">&quot;&quot;</span>;</div>
+<div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160;        }</div>
+<div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160;</div>
+<div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;        <span class="keywordflow">if</span> (infoConfig.isSet(<span class="stringliteral">&quot;groupnames.&quot;</span> + group)) {</div>
+<div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160;            <span class="keywordflow">return</span> infoConfig.getString(<span class="stringliteral">&quot;groupnames.&quot;</span> + group);</div>
+<div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160;        }</div>
+<div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160;</div>
+<div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160;        <span class="keywordflow">return</span> group;</div>
+<div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160;    }</div>
+<div class="line"><a name="l00312"></a><span class="lineno">  312</span>&#160;</div>
+<div class="line"><a name="l00319"></a><span class="lineno"><a class="line" href="classca_1_1q0r_1_1mchat_1_1api_1_1_reader.html#ab53d191681bc9c1bc4d4e3cb33a3d530">  319</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">static</span> String <a class="code" href="classca_1_1q0r_1_1mchat_1_1api_1_1_reader.html#ab53d191681bc9c1bc4d4e3cb33a3d530">getWorldName</a>(String world) {</div>
+<div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160;        YamlConfiguration infoConfig = YmlManager.getYml(<a class="code" href="enumca_1_1q0r_1_1mchat_1_1yml_1_1_yml_type.html#a46f70bd15aa817f014965b4891851055">YmlType.INFO_YML</a>).getConfig();</div>
 <div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160;</div>
-<div class="line"><a name="l00328"></a><span class="lineno"><a class="line" href="classca_1_1q0r_1_1mchat_1_1api_1_1_reader.html#ab53d191681bc9c1bc4d4e3cb33a3d530">  328</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">static</span> String <a class="code" href="classca_1_1q0r_1_1mchat_1_1api_1_1_reader.html#ab53d191681bc9c1bc4d4e3cb33a3d530">getWorldName</a>(String world) {</div>
-<div class="line"><a name="l00329"></a><span class="lineno">  329</span>&#160;        YamlConfiguration infoConfig = YmlManager.getYml(<a class="code" href="enumca_1_1q0r_1_1mchat_1_1yml_1_1_yml_type.html#a46f70bd15aa817f014965b4891851055">YmlType.INFO_YML</a>).getConfig();</div>
-<div class="line"><a name="l00330"></a><span class="lineno">  330</span>&#160;</div>
-<div class="line"><a name="l00331"></a><span class="lineno">  331</span>&#160;        <span class="keywordflow">if</span> (world.isEmpty()) {</div>
-<div class="line"><a name="l00332"></a><span class="lineno">  332</span>&#160;            <span class="keywordflow">return</span> <span class="stringliteral">&quot;&quot;</span>;</div>
-<div class="line"><a name="l00333"></a><span class="lineno">  333</span>&#160;        }</div>
-<div class="line"><a name="l00334"></a><span class="lineno">  334</span>&#160;</div>
-<div class="line"><a name="l00335"></a><span class="lineno">  335</span>&#160;        <span class="keywordflow">if</span> (infoConfig.isSet(<span class="stringliteral">&quot;worldnames.&quot;</span> + world)) {</div>
-<div class="line"><a name="l00336"></a><span class="lineno">  336</span>&#160;            <span class="keywordflow">return</span> infoConfig.getString(<span class="stringliteral">&quot;worldnames.&quot;</span> + world);</div>
-<div class="line"><a name="l00337"></a><span class="lineno">  337</span>&#160;        }</div>
-<div class="line"><a name="l00338"></a><span class="lineno">  338</span>&#160;</div>
-<div class="line"><a name="l00339"></a><span class="lineno">  339</span>&#160;        <span class="keywordflow">return</span> world;</div>
-<div class="line"><a name="l00340"></a><span class="lineno">  340</span>&#160;    }</div>
+<div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160;        <span class="keywordflow">if</span> (world.isEmpty()) {</div>
+<div class="line"><a name="l00323"></a><span class="lineno">  323</span>&#160;            <span class="keywordflow">return</span> <span class="stringliteral">&quot;&quot;</span>;</div>
+<div class="line"><a name="l00324"></a><span class="lineno">  324</span>&#160;        }</div>
+<div class="line"><a name="l00325"></a><span class="lineno">  325</span>&#160;</div>
+<div class="line"><a name="l00326"></a><span class="lineno">  326</span>&#160;        <span class="keywordflow">if</span> (infoConfig.isSet(<span class="stringliteral">&quot;worldnames.&quot;</span> + world)) {</div>
+<div class="line"><a name="l00327"></a><span class="lineno">  327</span>&#160;            <span class="keywordflow">return</span> infoConfig.getString(<span class="stringliteral">&quot;worldnames.&quot;</span> + world);</div>
+<div class="line"><a name="l00328"></a><span class="lineno">  328</span>&#160;        }</div>
+<div class="line"><a name="l00329"></a><span class="lineno">  329</span>&#160;</div>
+<div class="line"><a name="l00330"></a><span class="lineno">  330</span>&#160;        <span class="keywordflow">return</span> world;</div>
+<div class="line"><a name="l00331"></a><span class="lineno">  331</span>&#160;    }</div>
+<div class="line"><a name="l00332"></a><span class="lineno">  332</span>&#160;</div>
+<div class="line"><a name="l00339"></a><span class="lineno"><a class="line" href="classca_1_1q0r_1_1mchat_1_1api_1_1_reader.html#a4e53a6cd992efd1279a9c1e4536a56c2">  339</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">static</span> String <a class="code" href="classca_1_1q0r_1_1mchat_1_1api_1_1_reader.html#a4e53a6cd992efd1279a9c1e4536a56c2">getMName</a>(UUID uuid) {</div>
+<div class="line"><a name="l00340"></a><span class="lineno">  340</span>&#160;        YamlConfiguration infoConfig = YmlManager.getYml(<a class="code" href="enumca_1_1q0r_1_1mchat_1_1yml_1_1_yml_type.html#a46f70bd15aa817f014965b4891851055">YmlType.INFO_YML</a>).getConfig();</div>
 <div class="line"><a name="l00341"></a><span class="lineno">  341</span>&#160;</div>
-<div class="line"><a name="l00348"></a><span class="lineno"><a class="line" href="classca_1_1q0r_1_1mchat_1_1api_1_1_reader.html#a4e53a6cd992efd1279a9c1e4536a56c2">  348</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">static</span> String <a class="code" href="classca_1_1q0r_1_1mchat_1_1api_1_1_reader.html#a4e53a6cd992efd1279a9c1e4536a56c2">getMName</a>(UUID uuid) {</div>
-<div class="line"><a name="l00349"></a><span class="lineno">  349</span>&#160;        YamlConfiguration infoConfig = YmlManager.getYml(<a class="code" href="enumca_1_1q0r_1_1mchat_1_1yml_1_1_yml_type.html#a46f70bd15aa817f014965b4891851055">YmlType.INFO_YML</a>).getConfig();</div>
+<div class="line"><a name="l00342"></a><span class="lineno">  342</span>&#160;        <span class="keywordflow">if</span> (infoConfig.isSet(<span class="stringliteral">&quot;mname.&quot;</span> + uuid)) {</div>
+<div class="line"><a name="l00343"></a><span class="lineno">  343</span>&#160;            <span class="keywordflow">if</span> (!(infoConfig.getString(<span class="stringliteral">&quot;mname.&quot;</span> + uuid).isEmpty())) {</div>
+<div class="line"><a name="l00344"></a><span class="lineno">  344</span>&#160;                <span class="keywordflow">return</span> infoConfig.getString(<span class="stringliteral">&quot;mname.&quot;</span> + uuid);</div>
+<div class="line"><a name="l00345"></a><span class="lineno">  345</span>&#160;            }</div>
+<div class="line"><a name="l00346"></a><span class="lineno">  346</span>&#160;        }</div>
+<div class="line"><a name="l00347"></a><span class="lineno">  347</span>&#160;</div>
+<div class="line"><a name="l00348"></a><span class="lineno">  348</span>&#160;        <span class="keywordflow">return</span> Bukkit.getServer().getPlayer(uuid).getName();</div>
+<div class="line"><a name="l00349"></a><span class="lineno">  349</span>&#160;    }</div>
 <div class="line"><a name="l00350"></a><span class="lineno">  350</span>&#160;</div>
-<div class="line"><a name="l00351"></a><span class="lineno">  351</span>&#160;        <span class="keywordflow">if</span> (infoConfig.isSet(<span class="stringliteral">&quot;mname.&quot;</span> + uuid)) {</div>
-<div class="line"><a name="l00352"></a><span class="lineno">  352</span>&#160;            <span class="keywordflow">if</span> (!(infoConfig.getString(<span class="stringliteral">&quot;mname.&quot;</span> + uuid).isEmpty())) {</div>
-<div class="line"><a name="l00353"></a><span class="lineno">  353</span>&#160;                <span class="keywordflow">return</span> infoConfig.getString(<span class="stringliteral">&quot;mname.&quot;</span> + uuid);</div>
-<div class="line"><a name="l00354"></a><span class="lineno">  354</span>&#160;            }</div>
-<div class="line"><a name="l00355"></a><span class="lineno">  355</span>&#160;        }</div>
-<div class="line"><a name="l00356"></a><span class="lineno">  356</span>&#160;</div>
-<div class="line"><a name="l00357"></a><span class="lineno">  357</span>&#160;        <span class="keywordflow">return</span> Bukkit.getServer().getPlayer(uuid).getName();</div>
-<div class="line"><a name="l00358"></a><span class="lineno">  358</span>&#160;    }</div>
-<div class="line"><a name="l00359"></a><span class="lineno">  359</span>&#160;</div>
-<div class="line"><a name="l00366"></a><span class="lineno"><a class="line" href="classca_1_1q0r_1_1mchat_1_1api_1_1_reader.html#a9c3bacba6cae5cac9bf07cddbdbd8d07">  366</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">static</span> String <a class="code" href="classca_1_1q0r_1_1mchat_1_1api_1_1_reader.html#a9c3bacba6cae5cac9bf07cddbdbd8d07">getEventMessage</a>(<a class="code" href="enumca_1_1q0r_1_1mchat_1_1types_1_1_event_type.html">EventType</a> type) {</div>
-<div class="line"><a name="l00367"></a><span class="lineno">  367</span>&#160;        <span class="keywordflow">switch</span> (type) {</div>
-<div class="line"><a name="l00368"></a><span class="lineno">  368</span>&#160;            <span class="keywordflow">case</span> JOIN:</div>
-<div class="line"><a name="l00369"></a><span class="lineno">  369</span>&#160;                <span class="keywordflow">return</span> LocaleType.MESSAGE_EVENT_JOIN.getRaw();</div>
-<div class="line"><a name="l00370"></a><span class="lineno">  370</span>&#160;            <span class="keywordflow">case</span> KICK:</div>
-<div class="line"><a name="l00371"></a><span class="lineno">  371</span>&#160;                <span class="keywordflow">return</span> LocaleType.MESSAGE_EVENT_KICK.getRaw();</div>
-<div class="line"><a name="l00372"></a><span class="lineno">  372</span>&#160;            <span class="keywordflow">case</span> LEAVE:</div>
-<div class="line"><a name="l00373"></a><span class="lineno">  373</span>&#160;                <span class="keywordflow">return</span> LocaleType.MESSAGE_EVENT_LEAVE.getRaw();</div>
-<div class="line"><a name="l00374"></a><span class="lineno">  374</span>&#160;            <span class="keywordflow">case</span> QUIT:</div>
-<div class="line"><a name="l00375"></a><span class="lineno">  375</span>&#160;                <span class="keywordflow">return</span> LocaleType.MESSAGE_EVENT_LEAVE.getRaw();</div>
-<div class="line"><a name="l00376"></a><span class="lineno">  376</span>&#160;        }</div>
-<div class="line"><a name="l00377"></a><span class="lineno">  377</span>&#160;</div>
-<div class="line"><a name="l00378"></a><span class="lineno">  378</span>&#160;        <span class="keywordflow">return</span> <span class="stringliteral">&quot;&quot;</span>;</div>
-<div class="line"><a name="l00379"></a><span class="lineno">  379</span>&#160;    }</div>
-<div class="line"><a name="l00380"></a><span class="lineno">  380</span>&#160;}</div>
+<div class="line"><a name="l00357"></a><span class="lineno"><a class="line" href="classca_1_1q0r_1_1mchat_1_1api_1_1_reader.html#a9c3bacba6cae5cac9bf07cddbdbd8d07">  357</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">static</span> String <a class="code" href="classca_1_1q0r_1_1mchat_1_1api_1_1_reader.html#a9c3bacba6cae5cac9bf07cddbdbd8d07">getEventMessage</a>(<a class="code" href="enumca_1_1q0r_1_1mchat_1_1types_1_1_event_type.html">EventType</a> type) {</div>
+<div class="line"><a name="l00358"></a><span class="lineno">  358</span>&#160;        <span class="keywordflow">switch</span> (type) {</div>
+<div class="line"><a name="l00359"></a><span class="lineno">  359</span>&#160;            <span class="keywordflow">case</span> JOIN:</div>
+<div class="line"><a name="l00360"></a><span class="lineno">  360</span>&#160;                <span class="keywordflow">return</span> LocaleType.MESSAGE_EVENT_JOIN.getRaw();</div>
+<div class="line"><a name="l00361"></a><span class="lineno">  361</span>&#160;            <span class="keywordflow">case</span> KICK:</div>
+<div class="line"><a name="l00362"></a><span class="lineno">  362</span>&#160;                <span class="keywordflow">return</span> LocaleType.MESSAGE_EVENT_KICK.getRaw();</div>
+<div class="line"><a name="l00363"></a><span class="lineno">  363</span>&#160;            <span class="keywordflow">case</span> LEAVE:</div>
+<div class="line"><a name="l00364"></a><span class="lineno">  364</span>&#160;                <span class="keywordflow">return</span> LocaleType.MESSAGE_EVENT_LEAVE.getRaw();</div>
+<div class="line"><a name="l00365"></a><span class="lineno">  365</span>&#160;            <span class="keywordflow">case</span> QUIT:</div>
+<div class="line"><a name="l00366"></a><span class="lineno">  366</span>&#160;                <span class="keywordflow">return</span> LocaleType.MESSAGE_EVENT_LEAVE.getRaw();</div>
+<div class="line"><a name="l00367"></a><span class="lineno">  367</span>&#160;        }</div>
+<div class="line"><a name="l00368"></a><span class="lineno">  368</span>&#160;</div>
+<div class="line"><a name="l00369"></a><span class="lineno">  369</span>&#160;        <span class="keywordflow">return</span> <span class="stringliteral">&quot;&quot;</span>;</div>
+<div class="line"><a name="l00370"></a><span class="lineno">  370</span>&#160;    }</div>
+<div class="line"><a name="l00371"></a><span class="lineno">  371</span>&#160;}</div>
 <div class="ttc" id="enumca_1_1q0r_1_1mchat_1_1types_1_1_info_type_html_ac15dae248681e21ce8698cb0738d470b"><div class="ttname"><a href="enumca_1_1q0r_1_1mchat_1_1types_1_1_info_type.html#ac15dae248681e21ce8698cb0738d470b">ca.q0r.mchat.types.InfoType.USER</a></div><div class="ttdeci">USER</div><div class="ttdoc">User Info Type. </div><div class="ttdef"><b>Definition:</b> <a href="_info_type_8java_source.html#l00014">InfoType.java:14</a></div></div>
 <div class="ttc" id="classca_1_1q0r_1_1mchat_1_1api_1_1_reader_html_ae08fd5f467b702deb42aa7bb78393f91"><div class="ttname"><a href="classca_1_1q0r_1_1mchat_1_1api_1_1_reader.html#ae08fd5f467b702deb42aa7bb78393f91">ca.q0r.mchat.api.Reader.getRawGroup</a></div><div class="ttdeci">static String getRawGroup(UUID uuid, InfoType type, String world)</div><div class="ttdoc">Raw Group Resolving. </div><div class="ttdef"><b>Definition:</b> <a href="_reader_8java_source.html#l00093">Reader.java:93</a></div></div>
-<div class="ttc" id="classca_1_1q0r_1_1mchat_1_1api_1_1_reader_html_a9c3bacba6cae5cac9bf07cddbdbd8d07"><div class="ttname"><a href="classca_1_1q0r_1_1mchat_1_1api_1_1_reader.html#a9c3bacba6cae5cac9bf07cddbdbd8d07">ca.q0r.mchat.api.Reader.getEventMessage</a></div><div class="ttdeci">static String getEventMessage(EventType type)</div><div class="ttdoc">Event Message Resolver. </div><div class="ttdef"><b>Definition:</b> <a href="_reader_8java_source.html#l00366">Reader.java:366</a></div></div>
-<div class="ttc" id="classca_1_1q0r_1_1mchat_1_1api_1_1_a_p_i_html_afa5685d7882372e36f5cfae7938fb6bd"><div class="ttname"><a href="classca_1_1q0r_1_1mchat_1_1api_1_1_a_p_i.html#afa5685d7882372e36f5cfae7938fb6bd">ca.q0r.mchat.api.API.isPluginEnabled</a></div><div class="ttdeci">static Boolean isPluginEnabled(PluginType type)</div><div class="ttdoc">Used to check if Plugin is enabled. </div><div class="ttdef"><b>Definition:</b> <a href="_a_p_i_8java_source.html#l00287">API.java:287</a></div></div>
+<div class="ttc" id="classca_1_1q0r_1_1mchat_1_1api_1_1_reader_html_a9c3bacba6cae5cac9bf07cddbdbd8d07"><div class="ttname"><a href="classca_1_1q0r_1_1mchat_1_1api_1_1_reader.html#a9c3bacba6cae5cac9bf07cddbdbd8d07">ca.q0r.mchat.api.Reader.getEventMessage</a></div><div class="ttdeci">static String getEventMessage(EventType type)</div><div class="ttdoc">Event Message Resolver. </div><div class="ttdef"><b>Definition:</b> <a href="_reader_8java_source.html#l00357">Reader.java:357</a></div></div>
+<div class="ttc" id="classca_1_1q0r_1_1mchat_1_1api_1_1_a_p_i_html_afa5685d7882372e36f5cfae7938fb6bd"><div class="ttname"><a href="classca_1_1q0r_1_1mchat_1_1api_1_1_a_p_i.html#afa5685d7882372e36f5cfae7938fb6bd">ca.q0r.mchat.api.API.isPluginEnabled</a></div><div class="ttdeci">static Boolean isPluginEnabled(PluginType type)</div><div class="ttdoc">Used to check if Plugin is enabled. </div><div class="ttdef"><b>Definition:</b> <a href="_a_p_i_8java_source.html#l00284">API.java:284</a></div></div>
 <div class="ttc" id="classca_1_1q0r_1_1mchat_1_1api_1_1_reader_html_a653f3c88d7fb02fce6bf50fa44186f82"><div class="ttname"><a href="classca_1_1q0r_1_1mchat_1_1api_1_1_reader.html#a653f3c88d7fb02fce6bf50fa44186f82">ca.q0r.mchat.api.Reader.getRawSuffix</a></div><div class="ttdeci">static String getRawSuffix(UUID uuid, InfoType type, String world)</div><div class="ttdoc">Raw Suffix Resolving. </div><div class="ttdef"><b>Definition:</b> <a href="_reader_8java_source.html#l00081">Reader.java:81</a></div></div>
 <div class="ttc" id="classca_1_1q0r_1_1mchat_1_1api_1_1_reader_html_aceb6baadf0d3272b48611ae07b0f132a"><div class="ttname"><a href="classca_1_1q0r_1_1mchat_1_1api_1_1_reader.html#aceb6baadf0d3272b48611ae07b0f132a">ca.q0r.mchat.api.Reader.getGroup</a></div><div class="ttdeci">static String getGroup(UUID uuid, String world)</div><div class="ttdoc">Formatted Group Resolving. </div><div class="ttdef"><b>Definition:</b> <a href="_reader_8java_source.html#l00141">Reader.java:141</a></div></div>
 <div class="ttc" id="enumca_1_1q0r_1_1mchat_1_1types_1_1_plugin_type_html"><div class="ttname"><a href="enumca_1_1q0r_1_1mchat_1_1types_1_1_plugin_type.html">ca.q0r.mchat.types.PluginType</a></div><div class="ttdoc">Enum for Different Plugin Types. </div><div class="ttdef"><b>Definition:</b> <a href="_plugin_type_8java_source.html#l00006">PluginType.java:6</a></div></div>
@@ -405,17 +396,17 @@ $(document).ready(function(){initNavTree('_reader_8java_source.html','');});
 <div class="ttc" id="classca_1_1q0r_1_1mchat_1_1api_1_1_reader_html_a643d7dd532a92f3982a1c38362d19779"><div class="ttname"><a href="classca_1_1q0r_1_1mchat_1_1api_1_1_reader.html#a643d7dd532a92f3982a1c38362d19779">ca.q0r.mchat.api.Reader.getRawInfo</a></div><div class="ttdeci">static String getRawInfo(UUID uuid, InfoType type, String world, String info)</div><div class="ttdoc">Raw Info Resolving. </div><div class="ttdef"><b>Definition:</b> <a href="_reader_8java_source.html#l00031">Reader.java:31</a></div></div>
 <div class="ttc" id="classca_1_1q0r_1_1mchat_1_1api_1_1_a_p_i_html"><div class="ttname"><a href="classca_1_1q0r_1_1mchat_1_1api_1_1_a_p_i.html">ca.q0r.mchat.api.API</a></div><div class="ttdoc">Class used for various tasks not covered by other classes. </div><div class="ttdef"><b>Definition:</b> <a href="_a_p_i_8java_source.html#l00021">API.java:21</a></div></div>
 <div class="ttc" id="enumca_1_1q0r_1_1mchat_1_1types_1_1_event_type_html"><div class="ttname"><a href="enumca_1_1q0r_1_1mchat_1_1types_1_1_event_type.html">ca.q0r.mchat.types.EventType</a></div><div class="ttdoc">Enum for Different Event Types. </div><div class="ttdef"><b>Definition:</b> <a href="_event_type_8java_source.html#l00006">EventType.java:6</a></div></div>
-<div class="ttc" id="classca_1_1q0r_1_1mchat_1_1api_1_1_reader_html_ab53d191681bc9c1bc4d4e3cb33a3d530"><div class="ttname"><a href="classca_1_1q0r_1_1mchat_1_1api_1_1_reader.html#ab53d191681bc9c1bc4d4e3cb33a3d530">ca.q0r.mchat.api.Reader.getWorldName</a></div><div class="ttdeci">static String getWorldName(String world)</div><div class="ttdoc">World Name Resolver. </div><div class="ttdef"><b>Definition:</b> <a href="_reader_8java_source.html#l00328">Reader.java:328</a></div></div>
+<div class="ttc" id="classca_1_1q0r_1_1mchat_1_1api_1_1_reader_html_ab53d191681bc9c1bc4d4e3cb33a3d530"><div class="ttname"><a href="classca_1_1q0r_1_1mchat_1_1api_1_1_reader.html#ab53d191681bc9c1bc4d4e3cb33a3d530">ca.q0r.mchat.api.Reader.getWorldName</a></div><div class="ttdeci">static String getWorldName(String world)</div><div class="ttdoc">World Name Resolver. </div><div class="ttdef"><b>Definition:</b> <a href="_reader_8java_source.html#l00319">Reader.java:319</a></div></div>
 <div class="ttc" id="enumca_1_1q0r_1_1mchat_1_1types_1_1_plugin_type_html_ad1e92828e8e5207a7e56b496d55a299c"><div class="ttname"><a href="enumca_1_1q0r_1_1mchat_1_1types_1_1_plugin_type.html#ad1e92828e8e5207a7e56b496d55a299c">ca.q0r.mchat.types.PluginType.VAULT_CHAT</a></div><div class="ttdeci">VAULT_CHAT</div><div class="ttdoc">Vault Chat Plugin. </div><div class="ttdef"><b>Definition:</b> <a href="_plugin_type_8java_source.html#l00014">PluginType.java:14</a></div></div>
 <div class="ttc" id="classca_1_1q0r_1_1mchat_1_1api_1_1_reader_html_acb17cd895acc73cc44cacf870fc3cac2"><div class="ttname"><a href="classca_1_1q0r_1_1mchat_1_1api_1_1_reader.html#acb17cd895acc73cc44cacf870fc3cac2">ca.q0r.mchat.api.Reader.getRawPrefix</a></div><div class="ttdeci">static String getRawPrefix(UUID uuid, InfoType type, String world)</div><div class="ttdoc">Raw Prefix Resolving. </div><div class="ttdef"><b>Definition:</b> <a href="_reader_8java_source.html#l00069">Reader.java:69</a></div></div>
 <div class="ttc" id="enumca_1_1q0r_1_1mchat_1_1yml_1_1_yml_type_html_a46f70bd15aa817f014965b4891851055"><div class="ttname"><a href="enumca_1_1q0r_1_1mchat_1_1yml_1_1_yml_type.html#a46f70bd15aa817f014965b4891851055">ca.q0r.mchat.yml.YmlType.INFO_YML</a></div><div class="ttdeci">INFO_YML</div><div class="ttdoc">Info YML. </div><div class="ttdef"><b>Definition:</b> <a href="_yml_type_8java_source.html#l00018">YmlType.java:18</a></div></div>
 <div class="ttc" id="enumca_1_1q0r_1_1mchat_1_1types_1_1_info_type_html"><div class="ttname"><a href="enumca_1_1q0r_1_1mchat_1_1types_1_1_info_type.html">ca.q0r.mchat.types.InfoType</a></div><div class="ttdoc">Enum for Different Info Types. </div><div class="ttdef"><b>Definition:</b> <a href="_info_type_8java_source.html#l00006">InfoType.java:6</a></div></div>
-<div class="ttc" id="classca_1_1q0r_1_1mchat_1_1api_1_1_reader_html_a647b08302eed4af53bdef87c9eb4e62b"><div class="ttname"><a href="classca_1_1q0r_1_1mchat_1_1api_1_1_reader.html#a647b08302eed4af53bdef87c9eb4e62b">ca.q0r.mchat.api.Reader.getGroupName</a></div><div class="ttdeci">static String getGroupName(String group)</div><div class="ttdoc">Group Name Resolver. </div><div class="ttdef"><b>Definition:</b> <a href="_reader_8java_source.html#l00308">Reader.java:308</a></div></div>
+<div class="ttc" id="classca_1_1q0r_1_1mchat_1_1api_1_1_reader_html_a647b08302eed4af53bdef87c9eb4e62b"><div class="ttname"><a href="classca_1_1q0r_1_1mchat_1_1api_1_1_reader.html#a647b08302eed4af53bdef87c9eb4e62b">ca.q0r.mchat.api.Reader.getGroupName</a></div><div class="ttdeci">static String getGroupName(String group)</div><div class="ttdoc">Group Name Resolver. </div><div class="ttdef"><b>Definition:</b> <a href="_reader_8java_source.html#l00299">Reader.java:299</a></div></div>
 <div class="ttc" id="classca_1_1q0r_1_1mchat_1_1api_1_1_reader_html"><div class="ttname"><a href="classca_1_1q0r_1_1mchat_1_1api_1_1_reader.html">ca.q0r.mchat.api.Reader</a></div><div class="ttdoc">Class used to read from info.yml and various other Plugins. </div><div class="ttdef"><b>Definition:</b> <a href="_reader_8java_source.html#l00021">Reader.java:21</a></div></div>
 <div class="ttc" id="enumca_1_1q0r_1_1mchat_1_1types_1_1_plugin_type_html_a732085ebda23500d26e46d4ad27ac4cd"><div class="ttname"><a href="enumca_1_1q0r_1_1mchat_1_1types_1_1_plugin_type.html#a732085ebda23500d26e46d4ad27ac4cd">ca.q0r.mchat.types.PluginType.LEVELED_NODES</a></div><div class="ttdeci">LEVELED_NODES</div><div class="ttdoc">Leveled Nodes MChat Plugin. </div><div class="ttdef"><b>Definition:</b> <a href="_plugin_type_8java_source.html#l00018">PluginType.java:18</a></div></div>
 <div class="ttc" id="classca_1_1q0r_1_1mchat_1_1yml_1_1_yml_manager_html"><div class="ttname"><a href="classca_1_1q0r_1_1mchat_1_1yml_1_1_yml_manager.html">ca.q0r.mchat.yml.YmlManager</a></div><div class="ttdoc">Used to Manage all YML Configs. </div><div class="ttdef"><b>Definition:</b> <a href="_yml_manager_8java_source.html#l00011">YmlManager.java:11</a></div></div>
 <div class="ttc" id="enumca_1_1q0r_1_1mchat_1_1yml_1_1_yml_type_html"><div class="ttname"><a href="enumca_1_1q0r_1_1mchat_1_1yml_1_1_yml_type.html">ca.q0r.mchat.yml.YmlType</a></div><div class="ttdoc">Enum for Different YML Types. </div><div class="ttdef"><b>Definition:</b> <a href="_yml_type_8java_source.html#l00006">YmlType.java:6</a></div></div>
-<div class="ttc" id="classca_1_1q0r_1_1mchat_1_1api_1_1_reader_html_a4e53a6cd992efd1279a9c1e4536a56c2"><div class="ttname"><a href="classca_1_1q0r_1_1mchat_1_1api_1_1_reader.html#a4e53a6cd992efd1279a9c1e4536a56c2">ca.q0r.mchat.api.Reader.getMName</a></div><div class="ttdeci">static String getMName(UUID uuid)</div><div class="ttdoc">Player Name Resolver. </div><div class="ttdef"><b>Definition:</b> <a href="_reader_8java_source.html#l00348">Reader.java:348</a></div></div>
+<div class="ttc" id="classca_1_1q0r_1_1mchat_1_1api_1_1_reader_html_a4e53a6cd992efd1279a9c1e4536a56c2"><div class="ttname"><a href="classca_1_1q0r_1_1mchat_1_1api_1_1_reader.html#a4e53a6cd992efd1279a9c1e4536a56c2">ca.q0r.mchat.api.Reader.getMName</a></div><div class="ttdeci">static String getMName(UUID uuid)</div><div class="ttdoc">Player Name Resolver. </div><div class="ttdef"><b>Definition:</b> <a href="_reader_8java_source.html#l00339">Reader.java:339</a></div></div>
 <div class="ttc" id="classca_1_1q0r_1_1mchat_1_1api_1_1_reader_html_aac23b5824bb79f6e4c23d12d150a0267"><div class="ttname"><a href="classca_1_1q0r_1_1mchat_1_1api_1_1_reader.html#aac23b5824bb79f6e4c23d12d150a0267">ca.q0r.mchat.api.Reader.getPrefix</a></div><div class="ttdeci">static String getPrefix(UUID uuid, InfoType type, String world)</div><div class="ttdoc">Formatted Prefix Resolving. </div><div class="ttdef"><b>Definition:</b> <a href="_reader_8java_source.html#l00118">Reader.java:118</a></div></div>
 <div class="ttc" id="enumca_1_1q0r_1_1mchat_1_1types_1_1_plugin_type_html_abf32d812a4c7cbb056b88dbf479af234"><div class="ttname"><a href="enumca_1_1q0r_1_1mchat_1_1types_1_1_plugin_type.html#abf32d812a4c7cbb056b88dbf479af234">ca.q0r.mchat.types.PluginType.NEW_INFO</a></div><div class="ttdeci">NEW_INFO</div><div class="ttdoc">New Info MChat Plugin. </div><div class="ttdef"><b>Definition:</b> <a href="_plugin_type_8java_source.html#l00026">PluginType.java:26</a></div></div>
 <div class="ttc" id="enumca_1_1q0r_1_1mchat_1_1yml_1_1locale_1_1_locale_type_html"><div class="ttname"><a href="enumca_1_1q0r_1_1mchat_1_1yml_1_1locale_1_1_locale_type.html">ca.q0r.mchat.yml.locale.LocaleType</a></div><div class="ttdoc">Enum for Different Locale Values. </div><div class="ttdef"><b>Definition:</b> <a href="_locale_type_8java_source.html#l00010">LocaleType.java:10</a></div></div>
