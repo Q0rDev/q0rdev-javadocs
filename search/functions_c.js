@@ -7,6 +7,8 @@ var searchData=
   ['removeinfovar',['removeInfoVar',['../classca_1_1q0r_1_1mchat_1_1api_1_1_writer.html#ada45397f803d757806a2e11e02a47a07',1,'ca::q0r::mchat::api::Writer']]],
   ['removeoption',['removeOption',['../classca_1_1q0r_1_1mchat_1_1yml_1_1_yml.html#aaf5ec1cc622a61860058f44eb877f752',1,'ca::q0r::mchat::yml::Yml']]],
   ['removeuuidvar',['removeUuidVar',['../classca_1_1q0r_1_1mchat_1_1api_1_1_a_p_i.html#ae6ab181ac376c487a2e4349ee48f7c40',1,'ca::q0r::mchat::api::API']]],
+  ['removevar',['removeVar',['../classca_1_1q0r_1_1mchat_1_1variables_1_1_variable_manager.html#aed662ca4719b55ec2fa8a827a530070d',1,'ca::q0r::mchat::variables::VariableManager']]],
+  ['removevars',['removeVars',['../classca_1_1q0r_1_1mchat_1_1variables_1_1_variable_manager.html#a43f0f9f180dc05227983310c0dcda6f1',1,'ca::q0r::mchat::variables::VariableManager']]],
   ['removeworld',['removeWorld',['../classca_1_1q0r_1_1mchat_1_1api_1_1_writer.html#a0801288545ac720bc0d7bbc464b505e0',1,'ca::q0r::mchat::api::Writer']]],
   ['removeworldvar',['removeWorldVar',['../classca_1_1q0r_1_1mchat_1_1api_1_1_writer.html#aa4900f3ef1986862f071e585cc019b65',1,'ca::q0r::mchat::api::Writer']]],
   ['replace',['replace',['../classca_1_1q0r_1_1mchat_1_1api_1_1_a_p_i.html#aefa8e3bab0a49c88737df3d550160fb1',1,'ca.q0r.mchat.api.API.replace(String source, TreeMap&lt; String, String &gt; changes, IndicatorType type)'],['../classca_1_1q0r_1_1mchat_1_1api_1_1_a_p_i.html#a4b5b85d66e107172cc49030871522b99',1,'ca.q0r.mchat.api.API.replace(String source, String search, String replace, IndicatorType type)']]],

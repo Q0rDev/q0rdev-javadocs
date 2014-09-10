@@ -30,7 +30,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">MChat
-   &#160;<span id="projectnumber">da5e254b3c5dac49b8e95e5e9f4725ecc00b6f91</span>
+   &#160;<span id="projectnumber">665d695d93a958ecb7d8e2b09d4fb775285ffee3</span>
    </div>
    <div id="projectbrief">Chat Formatting Plugin for the Bukkit Minecraft Server Mod.</div>
   </td>
@@ -127,6 +127,12 @@ static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hre
 <tr class="memitem:ad6a0f4c739a0ed1aa38a887a0b77bd67"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classca_1_1q0r_1_1mchat_1_1variables_1_1_variable_manager.html#ad6a0f4c739a0ed1aa38a887a0b77bd67">addVars</a> (<a class="el" href="classca_1_1q0r_1_1mchat_1_1variables_1_1_var.html">Var</a>[] vars)</td></tr>
 <tr class="memdesc:ad6a0f4c739a0ed1aa38a887a0b77bd67"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds Vars to VarSet.  <a href="#ad6a0f4c739a0ed1aa38a887a0b77bd67">More...</a><br/></td></tr>
 <tr class="separator:ad6a0f4c739a0ed1aa38a887a0b77bd67"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aed662ca4719b55ec2fa8a827a530070d"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classca_1_1q0r_1_1mchat_1_1variables_1_1_variable_manager.html#aed662ca4719b55ec2fa8a827a530070d">removeVar</a> (String key)</td></tr>
+<tr class="memdesc:aed662ca4719b55ec2fa8a827a530070d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Removes <a class="el" href="classca_1_1q0r_1_1mchat_1_1variables_1_1_var.html" title="Var class used for all Variable processing. ">Var</a> from VarSet by their Keys.  <a href="#aed662ca4719b55ec2fa8a827a530070d">More...</a><br/></td></tr>
+<tr class="separator:aed662ca4719b55ec2fa8a827a530070d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a43f0f9f180dc05227983310c0dcda6f1"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classca_1_1q0r_1_1mchat_1_1variables_1_1_variable_manager.html#a43f0f9f180dc05227983310c0dcda6f1">removeVars</a> (String[] keys)</td></tr>
+<tr class="memdesc:a43f0f9f180dc05227983310c0dcda6f1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Removes Vars from VarSet by their Keys.  <a href="#a43f0f9f180dc05227983310c0dcda6f1">More...</a><br/></td></tr>
+<tr class="separator:a43f0f9f180dc05227983310c0dcda6f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1062283f03b415cbffbfe86e84d88bf9"><td class="memItemLeft" align="right" valign="top">static String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classca_1_1q0r_1_1mchat_1_1variables_1_1_variable_manager.html#a1062283f03b415cbffbfe86e84d88bf9">replaceVars</a> (String format, UUID uuid, String msg, Boolean doColour)</td></tr>
 <tr class="memdesc:a1062283f03b415cbffbfe86e84d88bf9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Variable Replacer.  <a href="#a1062283f03b415cbffbfe86e84d88bf9">More...</a><br/></td></tr>
 <tr class="separator:a1062283f03b415cbffbfe86e84d88bf9"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -207,6 +213,74 @@ static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hre
 
 </div>
 </div>
+<a class="anchor" id="aed662ca4719b55ec2fa8a827a530070d"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void ca.q0r.mchat.variables.VariableManager.removeVar </td>
+          <td>(</td>
+          <td class="paramtype">String&#160;</td>
+          <td class="paramname"><em>key</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Removes <a class="el" href="classca_1_1q0r_1_1mchat_1_1variables_1_1_var.html" title="Var class used for all Variable processing. ">Var</a> from VarSet by their Keys. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">key</td><td>Key of <a class="el" href="classca_1_1q0r_1_1mchat_1_1variables_1_1_var.html" title="Var class used for all Variable processing. ">Var</a> to be removed. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Definition at line <a class="el" href="_variable_manager_8java_source.html#l00107">107</a> of file <a class="el" href="_variable_manager_8java_source.html">VariableManager.java</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a43f0f9f180dc05227983310c0dcda6f1"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void ca.q0r.mchat.variables.VariableManager.removeVars </td>
+          <td>(</td>
+          <td class="paramtype">String[]&#160;</td>
+          <td class="paramname"><em>keys</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Removes Vars from VarSet by their Keys. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">keys</td><td>Keys of Vars to be removed. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Definition at line <a class="el" href="_variable_manager_8java_source.html#l00132">132</a> of file <a class="el" href="_variable_manager_8java_source.html">VariableManager.java</a>.</p>
+
+</div>
+</div>
 <a class="anchor" id="af19831a204f14e55e95ad9c1ef23b4ce"></a>
 <div class="memitem">
 <div class="memproto">
@@ -249,7 +323,7 @@ static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hre
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>String with Custom Variables replaced. </dd></dl>
 
-<p>Definition at line <a class="el" href="_variable_manager_8java_source.html#l00191">191</a> of file <a class="el" href="_variable_manager_8java_source.html">VariableManager.java</a>.</p>
+<p>Definition at line <a class="el" href="_variable_manager_8java_source.html#l00227">227</a> of file <a class="el" href="_variable_manager_8java_source.html">VariableManager.java</a>.</p>
 
 </div>
 </div>
@@ -309,7 +383,7 @@ static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hre
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>String with Variables replaced. </dd></dl>
 
-<p>Definition at line <a class="el" href="_variable_manager_8java_source.html#l00111">111</a> of file <a class="el" href="_variable_manager_8java_source.html">VariableManager.java</a>.</p>
+<p>Definition at line <a class="el" href="_variable_manager_8java_source.html#l00147">147</a> of file <a class="el" href="_variable_manager_8java_source.html">VariableManager.java</a>.</p>
 
 </div>
 </div>
