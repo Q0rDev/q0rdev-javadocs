@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['old_5fnodes',['OLD_NODES',['../enumca_1_1q0r_1_1mchat_1_1types_1_1_plugin_type.html#a8fe75ce524a1b2682682cc049bfa96ef',1,'ca::q0r::mchat::types::PluginType']]]
+  ['old_5fnodes',['OLD_NODES',['../enumca_1_1q0r_1_1sponge_1_1mchat_1_1types_1_1_plugin_type.html#ac3c48a2932cae6112eaba0caf053d698',1,'ca::q0r::sponge::mchat::types::PluginType']]]
 ];

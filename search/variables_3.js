@@ -1,14 +1,14 @@
 var searchData=
 [
-  ['file',['file',['../classca_1_1q0r_1_1mchat_1_1yml_1_1_yml.html#aa1254e71c07b2c6cefb09a88bbf9609c',1,'ca::q0r::mchat::yml::Yml']]],
-  ['first',['FIRST',['../enumca_1_1q0r_1_1mchat_1_1variables_1_1_resolve_priority.html#aa41e7d5a13e549a54bf3e2d15ba5edec',1,'ca::q0r::mchat::variables::ResolvePriority']]],
-  ['format_5fchat',['FORMAT_CHAT',['../enumca_1_1q0r_1_1mchat_1_1yml_1_1locale_1_1_locale_type.html#a824a98a3a167434b86a3b7c566df1329',1,'ca::q0r::mchat::yml::locale::LocaleType']]],
-  ['format_5fdate',['FORMAT_DATE',['../enumca_1_1q0r_1_1mchat_1_1yml_1_1locale_1_1_locale_type.html#a797bb7f9777c758d5ee089ba26173265',1,'ca::q0r::mchat::yml::locale::LocaleType']]],
-  ['format_5fforward',['FORMAT_FORWARD',['../enumca_1_1q0r_1_1mchat_1_1yml_1_1locale_1_1_locale_type.html#acadb72145999a923b07e6ce66e46210c',1,'ca::q0r::mchat::yml::locale::LocaleType']]],
-  ['format_5flist_5fcmd',['FORMAT_LIST_CMD',['../enumca_1_1q0r_1_1mchat_1_1yml_1_1locale_1_1_locale_type.html#a92b8e169ae5b6e80895039581504ad9a',1,'ca::q0r::mchat::yml::locale::LocaleType']]],
-  ['format_5flocal',['FORMAT_LOCAL',['../enumca_1_1q0r_1_1mchat_1_1yml_1_1locale_1_1_locale_type.html#a60cf545ca94d16a2c08c257027a8f667',1,'ca::q0r::mchat::yml::locale::LocaleType']]],
-  ['format_5fme',['FORMAT_ME',['../enumca_1_1q0r_1_1mchat_1_1yml_1_1locale_1_1_locale_type.html#a2dc62664cc3a5f581b45dbeb0823796b',1,'ca::q0r::mchat::yml::locale::LocaleType']]],
-  ['format_5fname',['FORMAT_NAME',['../enumca_1_1q0r_1_1mchat_1_1yml_1_1locale_1_1_locale_type.html#ac12e491372d861c39b2afacba51ad3c2',1,'ca::q0r::mchat::yml::locale::LocaleType']]],
-  ['format_5fspy',['FORMAT_SPY',['../enumca_1_1q0r_1_1mchat_1_1yml_1_1locale_1_1_locale_type.html#ae5c6b7ee25bfae3cbf477dadb909f35a',1,'ca::q0r::mchat::yml::locale::LocaleType']]],
-  ['format_5ftabbed_5flist',['FORMAT_TABBED_LIST',['../enumca_1_1q0r_1_1mchat_1_1yml_1_1locale_1_1_locale_type.html#ac3306d4eff0ffbc7eb3eac7c7846c14d',1,'ca::q0r::mchat::yml::locale::LocaleType']]]
+  ['file',['file',['../classca_1_1q0r_1_1sponge_1_1mchat_1_1config_1_1_config.html#acfacc696e521a41bc77ff22faa3e8e89',1,'ca::q0r::sponge::mchat::config::Config']]],
+  ['first',['FIRST',['../enumca_1_1q0r_1_1sponge_1_1mchat_1_1variables_1_1_resolve_priority.html#a17b036697b4ad6118274d210c6b7e5da',1,'ca::q0r::sponge::mchat::variables::ResolvePriority']]],
+  ['format_5fchat',['FORMAT_CHAT',['../enumca_1_1q0r_1_1sponge_1_1mchat_1_1config_1_1locale_1_1_locale_type.html#ad8495b6601940e6dd093e124265e04fa',1,'ca::q0r::sponge::mchat::config::locale::LocaleType']]],
+  ['format_5fcustom_5fname',['FORMAT_CUSTOM_NAME',['../enumca_1_1q0r_1_1sponge_1_1mchat_1_1config_1_1locale_1_1_locale_type.html#a73b4f0f9eb6edb3aec14a4f5bd88710d',1,'ca::q0r::sponge::mchat::config::locale::LocaleType']]],
+  ['format_5fdate',['FORMAT_DATE',['../enumca_1_1q0r_1_1sponge_1_1mchat_1_1config_1_1locale_1_1_locale_type.html#af2c5428f6e80f78a56b5e99a847f14db',1,'ca::q0r::sponge::mchat::config::locale::LocaleType']]],
+  ['format_5fforward',['FORMAT_FORWARD',['../enumca_1_1q0r_1_1sponge_1_1mchat_1_1config_1_1locale_1_1_locale_type.html#a3f979439192e4f94864d98ebf5702f4c',1,'ca::q0r::sponge::mchat::config::locale::LocaleType']]],
+  ['format_5flist_5fcmd',['FORMAT_LIST_CMD',['../enumca_1_1q0r_1_1sponge_1_1mchat_1_1config_1_1locale_1_1_locale_type.html#abd6b0311b4856eed764ca43a807e8019',1,'ca::q0r::sponge::mchat::config::locale::LocaleType']]],
+  ['format_5flocal',['FORMAT_LOCAL',['../enumca_1_1q0r_1_1sponge_1_1mchat_1_1config_1_1locale_1_1_locale_type.html#a709841b05074d2f573576eb1c1ee7858',1,'ca::q0r::sponge::mchat::config::locale::LocaleType']]],
+  ['format_5fme',['FORMAT_ME',['../enumca_1_1q0r_1_1sponge_1_1mchat_1_1config_1_1locale_1_1_locale_type.html#a69793b38e5fc0f4f003b977d7f5676a9',1,'ca::q0r::sponge::mchat::config::locale::LocaleType']]],
+  ['format_5fname',['FORMAT_NAME',['../enumca_1_1q0r_1_1sponge_1_1mchat_1_1config_1_1locale_1_1_locale_type.html#a0ba51fa6aceca4489c1fe80f3fb13a09',1,'ca::q0r::sponge::mchat::config::locale::LocaleType']]],
+  ['format_5fspy',['FORMAT_SPY',['../enumca_1_1q0r_1_1sponge_1_1mchat_1_1config_1_1locale_1_1_locale_type.html#aae90fcd2e78ad35f8abcf47f8650eef9',1,'ca::q0r::sponge::mchat::config::locale::LocaleType']]]
 ];
